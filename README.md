@@ -83,14 +83,14 @@ Patch Pods files
 ---------------------------
 If you install or update the pods to a new version, you will also need to patch few files. If you downloaded the source from the DevTech GitHub repo, just ignore these instructions.
 
-     a. in Pods/AFNetworking/AFNetworking/AFHTTPClient.h line #305, add the following
+  a. in Pods/AFNetworking/AFNetworking/AFHTTPClient.h line #305, add the following
 
         - (NSMutableURLRequest *)multipartFormRequestWithMethodAllSigned:(NSString *)method
                                    path:(NSString *)path
                              parameters:(NSDictionary *)parameters
               constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block;
 
-     b. in Pods/AFNetworking/AFNetworking/AFHTTPClient.m line #548, add the following
+  b. in Pods/AFNetworking/AFNetworking/AFHTTPClient.m line #548, add the following
 
         - (NSMutableURLRequest *)multipartFormRequestWithMethodAllSigned:(NSString *)method
                                    path:(NSString *)path
@@ -128,11 +128,11 @@ If you install or update the pods to a new version, you will also need to patch 
             return [formData requestByFinalizingMultipartFormData];
         }
 
-     c. In Pods/AFOAuth1Client/AFOAuth1Client/AFOAuth1Client.m line #358, add the following
+  c. In Pods/AFOAuth1Client/AFOAuth1Client/AFOAuth1Client.m line #358, add the following
 
         if ( callbackURL != nil )
 
-     d. In Pods/AFOAuth1Client/AFOAuth1Client/AFOAuth1Client.m line #380, change the code like this
+  d. In Pods/AFOAuth1Client/AFOAuth1Client/AFOAuth1Client.m line #380, change the code like this
 
         - (void)acquireOAuthAccessTokenWithPath:(NSString *)path
                                    requestToken:(AFOAuth1Token *)requestToken
@@ -150,7 +150,7 @@ If you install or update the pods to a new version, you will also need to patch 
                 if ( parameters[@"oauth_verifier"] != nil )
                     parameters[@"oauth_verifier"] = requestToken.verifier;
         
-     e. In Pods/RestKit/Code/Network/RKObjectManager.h line #396, add the following
+  e. In Pods/RestKit/Code/Network/RKObjectManager.h line #396, add the following
 
         - (NSMutableURLRequest *)multipartFormRequestWithObjectAllSigned:(id)object
                                 method:(RKRequestMethod)method
@@ -158,7 +158,7 @@ If you install or update the pods to a new version, you will also need to patch 
                             parameters:(NSDictionary *)parameters
              constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block;
 
-     f. In Pods/RestKit/Code/Network/RKObjectManager.m line #513, add the following
+  f. In Pods/RestKit/Code/Network/RKObjectManager.m line #513, add the following
 
         - (NSMutableURLRequest *)multipartFormRequestWithObjectAllSigned:(id)object
                                                  method:(RKRequestMethod)method
