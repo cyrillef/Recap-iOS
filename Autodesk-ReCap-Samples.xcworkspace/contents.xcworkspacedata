@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Autodesk-ReCap/Autodesk-ReCap.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Autodesk-oAuth/Autodesk-oAuth.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Autodesk-iOSViewer/Autodesk-iOSViewer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:iOSReCap/iOSReCap.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

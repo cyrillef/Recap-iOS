@@ -1,0 +1,754 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		E69CDA371939B8080042374B /* Autodesk-ReCap.framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E69CDA381939B8080042374B /* Build configuration list for PBXAggregateTarget "Autodesk-ReCap.framework" */;
+			buildPhases = (
+				E69CDA531939BA2E0042374B /* Build Framework */,
+			);
+			dependencies = (
+				E69CDA501939BA270042374B /* PBXTargetDependency */,
+				E69CDA521939BA270042374B /* PBXTargetDependency */,
+			);
+			name = "Autodesk-ReCap.framework";
+			productName = "Autodesk-ReCap.framework";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		A6BFE67F779C45A2B9DBD722 /* libPods-Autodesk-ReCap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7510D6B793334396B358BCBE /* libPods-Autodesk-ReCap.a */; };
+		E69A45951939DEBC00F93483 /* Autodesk_ReCapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E69CDA2D1939B78E0042374B /* Autodesk_ReCapTests.m */; };
+		E69CDA121939B78E0042374B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69CDA111939B78E0042374B /* Foundation.framework */; };
+		E69CDA171939B78E0042374B /* Autodesk-ReCap.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E69CDA161939B78E0042374B /* Autodesk-ReCap.h */; };
+		E69CDA201939B78E0042374B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69CDA1F1939B78E0042374B /* XCTest.framework */; };
+		E69CDA211939B78E0042374B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69CDA111939B78E0042374B /* Foundation.framework */; };
+		E69CDA231939B78E0042374B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69CDA221939B78E0042374B /* UIKit.framework */; };
+		E69CDA261939B78E0042374B /* libAutodesk-ReCap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E69CDA0E1939B78E0042374B /* libAutodesk-ReCap.a */; };
+		E69CDA2C1939B78E0042374B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E69CDA2A1939B78E0042374B /* InfoPlist.strings */; };
+		E69CDA411939B82D0042374B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69CDA401939B82D0042374B /* CoreFoundation.framework */; };
+		E69CDA471939B82D0042374B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E69CDA451939B82D0042374B /* InfoPlist.strings */; };
+		E69CDA4D1939B8930042374B /* Autodesk-ReCap.h in Headers */ = {isa = PBXBuildFile; fileRef = E69CDA161939B78E0042374B /* Autodesk-ReCap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E69CDA681939CD870042374B /* AdskReCap.h in Headers */ = {isa = PBXBuildFile; fileRef = E69CDA661939CD870042374B /* AdskReCap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E69CDA691939CD870042374B /* AdskReCap.m in Sources */ = {isa = PBXBuildFile; fileRef = E69CDA671939CD870042374B /* AdskReCap.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E69CDA241939B78E0042374B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E69CDA061939B78E0042374B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E69CDA0D1939B78E0042374B;
+			remoteInfo = "Autodesk-ReCap";
+		};
+		E69CDA4F1939BA270042374B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E69CDA061939B78E0042374B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E69CDA0D1939B78E0042374B;
+			remoteInfo = "Autodesk-ReCap";
+		};
+		E69CDA511939BA270042374B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E69CDA061939B78E0042374B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E69CDA3E1939B82C0042374B;
+			remoteInfo = "Autodesk-ReCap-Resources";
+		};
+		E69CDA541939BA5F0042374B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E69CDA061939B78E0042374B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E69CDA0D1939B78E0042374B;
+			remoteInfo = "Autodesk-ReCap";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E69CDA0C1939B78E0042374B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				E69CDA171939B78E0042374B /* Autodesk-ReCap.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7510D6B793334396B358BCBE /* libPods-Autodesk-ReCap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Autodesk-ReCap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		75C027FD5D41481D9E780F25 /* Pods-Autodesk-ReCap.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Autodesk-ReCap.xcconfig"; path = "../Pods/Pods-Autodesk-ReCap.xcconfig"; sourceTree = "<group>"; };
+		E69CDA0E1939B78E0042374B /* libAutodesk-ReCap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libAutodesk-ReCap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E69CDA111939B78E0042374B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E69CDA151939B78E0042374B /* Autodesk-ReCap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Autodesk-ReCap-Prefix.pch"; sourceTree = "<group>"; };
+		E69CDA161939B78E0042374B /* Autodesk-ReCap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Autodesk-ReCap.h"; sourceTree = "<group>"; };
+		E69CDA1E1939B78E0042374B /* Autodesk-ReCapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Autodesk-ReCapTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E69CDA1F1939B78E0042374B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E69CDA221939B78E0042374B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		E69CDA291939B78E0042374B /* Autodesk-ReCapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Autodesk-ReCapTests-Info.plist"; sourceTree = "<group>"; };
+		E69CDA2B1939B78E0042374B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E69CDA2D1939B78E0042374B /* Autodesk_ReCapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Autodesk_ReCapTests.m; sourceTree = "<group>"; };
+		E69CDA3F1939B82C0042374B /* Autodesk-ReCap.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Autodesk-ReCap.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E69CDA401939B82D0042374B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		E69CDA441939B82D0042374B /* Autodesk-ReCap-Resources-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Autodesk-ReCap-Resources-Info.plist"; sourceTree = "<group>"; };
+		E69CDA461939B82D0042374B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E69CDA481939B82D0042374B /* Autodesk-ReCap-Resources-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Autodesk-ReCap-Resources-Prefix.pch"; sourceTree = "<group>"; };
+		E69CDA661939CD870042374B /* AdskReCap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdskReCap.h; sourceTree = "<group>"; };
+		E69CDA671939CD870042374B /* AdskReCap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdskReCap.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E69CDA0B1939B78E0042374B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E69CDA121939B78E0042374B /* Foundation.framework in Frameworks */,
+				A6BFE67F779C45A2B9DBD722 /* libPods-Autodesk-ReCap.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E69CDA1B1939B78E0042374B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E69CDA201939B78E0042374B /* XCTest.framework in Frameworks */,
+				E69CDA261939B78E0042374B /* libAutodesk-ReCap.a in Frameworks */,
+				E69CDA231939B78E0042374B /* UIKit.framework in Frameworks */,
+				E69CDA211939B78E0042374B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E69CDA3C1939B82C0042374B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E69CDA411939B82D0042374B /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E69CDA051939B78E0042374B = {
+			isa = PBXGroup;
+			children = (
+				E69CDA131939B78E0042374B /* Autodesk-ReCap */,
+				E69CDA271939B78E0042374B /* Autodesk-ReCapTests */,
+				E69CDA421939B82D0042374B /* Autodesk-ReCap-Resources */,
+				E69CDA101939B78E0042374B /* Frameworks */,
+				E69CDA0F1939B78E0042374B /* Products */,
+				75C027FD5D41481D9E780F25 /* Pods-Autodesk-ReCap.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		E69CDA0F1939B78E0042374B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E69CDA0E1939B78E0042374B /* libAutodesk-ReCap.a */,
+				E69CDA1E1939B78E0042374B /* Autodesk-ReCapTests.xctest */,
+				E69CDA3F1939B82C0042374B /* Autodesk-ReCap.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E69CDA101939B78E0042374B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E69CDA111939B78E0042374B /* Foundation.framework */,
+				E69CDA1F1939B78E0042374B /* XCTest.framework */,
+				E69CDA221939B78E0042374B /* UIKit.framework */,
+				E69CDA401939B82D0042374B /* CoreFoundation.framework */,
+				7510D6B793334396B358BCBE /* libPods-Autodesk-ReCap.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E69CDA131939B78E0042374B /* Autodesk-ReCap */ = {
+			isa = PBXGroup;
+			children = (
+				E69CDA161939B78E0042374B /* Autodesk-ReCap.h */,
+				E69CDA661939CD870042374B /* AdskReCap.h */,
+				E69CDA671939CD870042374B /* AdskReCap.m */,
+				E69CDA141939B78E0042374B /* Supporting Files */,
+			);
+			path = "Autodesk-ReCap";
+			sourceTree = "<group>";
+		};
+		E69CDA141939B78E0042374B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E69CDA151939B78E0042374B /* Autodesk-ReCap-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E69CDA271939B78E0042374B /* Autodesk-ReCapTests */ = {
+			isa = PBXGroup;
+			children = (
+				E69CDA2D1939B78E0042374B /* Autodesk_ReCapTests.m */,
+				E69CDA281939B78E0042374B /* Supporting Files */,
+			);
+			path = "Autodesk-ReCapTests";
+			sourceTree = "<group>";
+		};
+		E69CDA281939B78E0042374B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E69CDA291939B78E0042374B /* Autodesk-ReCapTests-Info.plist */,
+				E69CDA2A1939B78E0042374B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E69CDA421939B82D0042374B /* Autodesk-ReCap-Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E69CDA431939B82D0042374B /* Supporting Files */,
+			);
+			path = "Autodesk-ReCap-Resources";
+			sourceTree = "<group>";
+		};
+		E69CDA431939B82D0042374B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E69CDA441939B82D0042374B /* Autodesk-ReCap-Resources-Info.plist */,
+				E69CDA451939B82D0042374B /* InfoPlist.strings */,
+				E69CDA481939B82D0042374B /* Autodesk-ReCap-Resources-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E69CDA4C1939B88D0042374B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E69CDA4D1939B8930042374B /* Autodesk-ReCap.h in Headers */,
+				E69CDA681939CD870042374B /* AdskReCap.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E69CDA0D1939B78E0042374B /* Autodesk-ReCap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E69CDA311939B78E0042374B /* Build configuration list for PBXNativeTarget "Autodesk-ReCap" */;
+			buildPhases = (
+				241514066EFC449DBC1CCB22 /* Check Pods Manifest.lock */,
+				E69CDA0A1939B78E0042374B /* Sources */,
+				E69CDA0B1939B78E0042374B /* Frameworks */,
+				E69CDA0C1939B78E0042374B /* CopyFiles */,
+				E69CDA4C1939B88D0042374B /* Headers */,
+				E69CDA4E1939B8CA0042374B /* Prepare Framework */,
+				405D0E0A704C4E0DBE45E33C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Autodesk-ReCap";
+			productName = "Autodesk-ReCap";
+			productReference = E69CDA0E1939B78E0042374B /* libAutodesk-ReCap.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E69CDA1D1939B78E0042374B /* Autodesk-ReCapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E69CDA341939B78E0042374B /* Build configuration list for PBXNativeTarget "Autodesk-ReCapTests" */;
+			buildPhases = (
+				E69CDA1A1939B78E0042374B /* Sources */,
+				E69CDA1B1939B78E0042374B /* Frameworks */,
+				E69CDA1C1939B78E0042374B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E69CDA251939B78E0042374B /* PBXTargetDependency */,
+			);
+			name = "Autodesk-ReCapTests";
+			productName = "Autodesk-ReCapTests";
+			productReference = E69CDA1E1939B78E0042374B /* Autodesk-ReCapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E69CDA3E1939B82C0042374B /* Autodesk-ReCap-Resources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E69CDA491939B82D0042374B /* Build configuration list for PBXNativeTarget "Autodesk-ReCap-Resources" */;
+			buildPhases = (
+				E69CDA3B1939B82C0042374B /* Sources */,
+				E69CDA3C1939B82C0042374B /* Frameworks */,
+				E69CDA3D1939B82C0042374B /* Resources */,
+				E69CDA561939BA770042374B /* Build Framework */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E69CDA551939BA5F0042374B /* PBXTargetDependency */,
+			);
+			name = "Autodesk-ReCap-Resources";
+			productName = "Autodesk-ReCap-Resources";
+			productReference = E69CDA3F1939B82C0042374B /* Autodesk-ReCap.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E69CDA061939B78E0042374B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Autodesk;
+				TargetAttributes = {
+					E69CDA1D1939B78E0042374B = {
+						TestTargetID = E69CDA371939B8080042374B;
+					};
+				};
+			};
+			buildConfigurationList = E69CDA091939B78E0042374B /* Build configuration list for PBXProject "Autodesk-ReCap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E69CDA051939B78E0042374B;
+			productRefGroup = E69CDA0F1939B78E0042374B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E69CDA0D1939B78E0042374B /* Autodesk-ReCap */,
+				E69CDA1D1939B78E0042374B /* Autodesk-ReCapTests */,
+				E69CDA371939B8080042374B /* Autodesk-ReCap.framework */,
+				E69CDA3E1939B82C0042374B /* Autodesk-ReCap-Resources */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E69CDA1C1939B78E0042374B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E69CDA2C1939B78E0042374B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E69CDA3D1939B82C0042374B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E69CDA471939B82D0042374B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		241514066EFC449DBC1CCB22 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		405D0E0A704C4E0DBE45E33C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Pods-Autodesk-ReCap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E69CDA4E1939B8CA0042374B /* Prepare Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Prepare Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Resources\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\nln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Resources\"\nln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Headers\"";
+			showEnvVarsInLog = 0;
+		};
+		E69CDA531939BA2E0042374B /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nlipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_TARGET_NAME}\"";
+			showEnvVarsInLog = 0;
+		};
+		E69CDA561939BA770042374B /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_BUNDLE_PATH=\"${SF_TARGET_NAME}.${WRAPPER_EXTENSION}\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_BUNDLE_PATH}\" \"${BUILT_PRODUCTS_DIR}/${SF_TARGET_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Resources/\"\n# Copy the binary to the other architecture folder to have a complete framework in both.\n#cp -a \"${BUILT_PRODUCTS_DIR}/${SF_BUNDLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_TARGET_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Resources/${SF_BUNDLE_PATH}\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E69CDA0A1939B78E0042374B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E69CDA691939CD870042374B /* AdskReCap.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E69CDA1A1939B78E0042374B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E69A45951939DEBC00F93483 /* Autodesk_ReCapTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E69CDA3B1939B82C0042374B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E69CDA251939B78E0042374B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E69CDA0D1939B78E0042374B /* Autodesk-ReCap */;
+			targetProxy = E69CDA241939B78E0042374B /* PBXContainerItemProxy */;
+		};
+		E69CDA501939BA270042374B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E69CDA0D1939B78E0042374B /* Autodesk-ReCap */;
+			targetProxy = E69CDA4F1939BA270042374B /* PBXContainerItemProxy */;
+		};
+		E69CDA521939BA270042374B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E69CDA3E1939B82C0042374B /* Autodesk-ReCap-Resources */;
+			targetProxy = E69CDA511939BA270042374B /* PBXContainerItemProxy */;
+		};
+		E69CDA551939BA5F0042374B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E69CDA0D1939B78E0042374B /* Autodesk-ReCap */;
+			targetProxy = E69CDA541939BA5F0042374B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E69CDA2A1939B78E0042374B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E69CDA2B1939B78E0042374B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E69CDA451939B82D0042374B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E69CDA461939B82D0042374B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E69CDA2F1939B78E0042374B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E69CDA301939B78E0042374B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E69CDA321939B78E0042374B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75C027FD5D41481D9E780F25 /* Pods-Autodesk-ReCap.xcconfig */;
+			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
+				DSTROOT = /tmp/Autodesk_ReCap.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Autodesk-ReCap/Autodesk-ReCap-Prefix.pch";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "Headers-ReCap";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Debug;
+		};
+		E69CDA331939B78E0042374B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75C027FD5D41481D9E780F25 /* Pods-Autodesk-ReCap.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				DSTROOT = /tmp/Autodesk_ReCap.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Autodesk-ReCap/Autodesk-ReCap-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "Headers-ReCap";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Release;
+		};
+		E69CDA351939B78E0042374B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Autodesk-ReCap/Autodesk-ReCap-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Autodesk-ReCapTests/Autodesk-ReCapTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E69CDA361939B78E0042374B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Autodesk-ReCap/Autodesk-ReCap-Prefix.pch";
+				INFOPLIST_FILE = "Autodesk-ReCapTests/Autodesk-ReCapTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		E69CDA391939B8080042374B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_STYLE = "non-global";
+			};
+			name = Debug;
+		};
+		E69CDA3A1939B8080042374B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_STYLE = "non-global";
+			};
+			name = Release;
+		};
+		E69CDA4A1939B82D0042374B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Autodesk-ReCap-Resources/Autodesk-ReCap-Resources-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Autodesk-ReCap-Resources/Autodesk-ReCap-Resources-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "Autodesk-ReCap";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		E69CDA4B1939B82D0042374B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Autodesk-ReCap-Resources/Autodesk-ReCap-Resources-Prefix.pch";
+				INFOPLIST_FILE = "Autodesk-ReCap-Resources/Autodesk-ReCap-Resources-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "Autodesk-ReCap";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E69CDA091939B78E0042374B /* Build configuration list for PBXProject "Autodesk-ReCap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E69CDA2F1939B78E0042374B /* Debug */,
+				E69CDA301939B78E0042374B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E69CDA311939B78E0042374B /* Build configuration list for PBXNativeTarget "Autodesk-ReCap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E69CDA321939B78E0042374B /* Debug */,
+				E69CDA331939B78E0042374B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E69CDA341939B78E0042374B /* Build configuration list for PBXNativeTarget "Autodesk-ReCapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E69CDA351939B78E0042374B /* Debug */,
+				E69CDA361939B78E0042374B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E69CDA381939B8080042374B /* Build configuration list for PBXAggregateTarget "Autodesk-ReCap.framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E69CDA391939B8080042374B /* Debug */,
+				E69CDA3A1939B8080042374B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E69CDA491939B82D0042374B /* Build configuration list for PBXNativeTarget "Autodesk-ReCap-Resources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E69CDA4A1939B82D0042374B /* Debug */,
+				E69CDA4B1939B82D0042374B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E69CDA061939B78E0042374B /* Project object */;
+}

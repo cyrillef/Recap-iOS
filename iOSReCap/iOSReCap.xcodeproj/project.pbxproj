@@ -1,0 +1,915 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D8F0041B61224F39B0BB0C4F /* libPods-iOSReCap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF2231C4C9BE4B58BE4F952E /* libPods-iOSReCap.a */; };
+		E614B786192B2C9A00925CC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E614B785192B2C9A00925CC5 /* Foundation.framework */; };
+		E614B788192B2C9A00925CC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E614B787192B2C9A00925CC5 /* CoreGraphics.framework */; };
+		E614B78A192B2C9A00925CC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E614B789192B2C9A00925CC5 /* UIKit.framework */; };
+		E614B790192B2C9A00925CC5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E614B78E192B2C9A00925CC5 /* InfoPlist.strings */; };
+		E614B792192B2C9A00925CC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E614B791192B2C9A00925CC5 /* main.m */; };
+		E614B796192B2C9A00925CC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E614B795192B2C9A00925CC5 /* AppDelegate.m */; };
+		E614B799192B2C9A00925CC5 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E614B797192B2C9A00925CC5 /* Main_iPhone.storyboard */; };
+		E614B79C192B2C9A00925CC5 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E614B79A192B2C9A00925CC5 /* Main_iPad.storyboard */; };
+		E614B79F192B2C9A00925CC5 /* PhotoScenesController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E614B79E192B2C9A00925CC5 /* PhotoScenesController.mm */; };
+		E614B7A1192B2C9A00925CC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E614B7A0192B2C9A00925CC5 /* Images.xcassets */; };
+		E614B7A8192B2C9A00925CC5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E614B7A7192B2C9A00925CC5 /* XCTest.framework */; };
+		E614B7A9192B2C9A00925CC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E614B785192B2C9A00925CC5 /* Foundation.framework */; };
+		E614B7AA192B2C9A00925CC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E614B789192B2C9A00925CC5 /* UIKit.framework */; };
+		E614B7B2192B2C9A00925CC5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E614B7B0192B2C9A00925CC5 /* InfoPlist.strings */; };
+		E614B7B4192B2C9A00925CC5 /* iOSReCapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E614B7B3192B2C9A00925CC5 /* iOSReCapTests.m */; };
+		E690D59819446D4500D651AD /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E690D59719446D4500D651AD /* CameraViewController.m */; };
+		E690D5A319446D9000D651AD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E690D5A219446D9000D651AD /* AVFoundation.framework */; };
+		E690D5A51944781400D651AD /* faceDetector.png in Resources */ = {isa = PBXBuildFile; fileRef = E690D5A41944781400D651AD /* faceDetector.png */; };
+		E690D5A7194483C900D651AD /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E690D5A6194483C900D651AD /* AssetsLibrary.framework */; };
+		E690D5AA19448E4B00D651AD /* AdskUIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E690D5A919448E4B00D651AD /* AdskUIImage+Additions.m */; };
+		E690D5AD1944CE0000D651AD /* ALAssetsLibrary+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E690D5AC1944CE0000D651AD /* ALAssetsLibrary+Additions.m */; };
+		E690D5B01944D67700D651AD /* photos-sel.png in Resources */ = {isa = PBXBuildFile; fileRef = E690D5AE1944D67700D651AD /* photos-sel.png */; };
+		E690D5B11944D67700D651AD /* photos.png in Resources */ = {isa = PBXBuildFile; fileRef = E690D5AF1944D67700D651AD /* photos.png */; };
+		E692EE52194214D200054BB0 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = E692EE51194214D200054BB0 /* refresh.png */; };
+		E692EE5A19437AD600054BB0 /* cam-black.png in Resources */ = {isa = PBXBuildFile; fileRef = E692EE5719437AD600054BB0 /* cam-black.png */; };
+		E692EE5B19437AD600054BB0 /* camera-black.png in Resources */ = {isa = PBXBuildFile; fileRef = E692EE5819437AD600054BB0 /* camera-black.png */; };
+		E692EE5C19437AD600054BB0 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = E692EE5919437AD600054BB0 /* camera.png */; };
+		E69A458A1939DCAB00F93483 /* Autodesk-ReCap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69A45891939DCAB00F93483 /* Autodesk-ReCap.framework */; };
+		E69CDA011938E0CD0042374B /* PhotoScenesItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = E69CDA001938E0CD0042374B /* PhotoScenesItem.mm */; };
+		E69CDA041938EAD90042374B /* ReCap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E69CDA031938EAD90042374B /* ReCap.jpg */; };
+		E6A6DD8919476E43004FB2B1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A6DD8819476E43004FB2B1 /* libz.dylib */; };
+		E6A6DD99194794A6004FB2B1 /* Autodesk-iOSViewer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E6A6DD98194794A6004FB2B1 /* Autodesk-iOSViewer.bundle */; };
+		E6B8348D1946043C00DDD174 /* Add.png in Resources */ = {isa = PBXBuildFile; fileRef = E6B8348C1946043C00DDD174 /* Add.png */; };
+		E6B834981946123200DDD174 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = E6B834971946123200DDD174 /* logout.png */; };
+		E6B8349A1946128700DDD174 /* Process.png in Resources */ = {isa = PBXBuildFile; fileRef = E6B834991946128700DDD174 /* Process.png */; };
+		E6B8349C194639B400DDD174 /* 3dviewer.png in Resources */ = {isa = PBXBuildFile; fileRef = E6B8349B194639B400DDD174 /* 3dviewer.png */; };
+		E6FE30CD19320EB1001B8589 /* Autodesk-oAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6FE30CC19320EB1001B8589 /* Autodesk-oAuth.framework */; };
+		E6FE30D019321DD7001B8589 /* Autodesk-iOSViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6FE30CE19321212001B8589 /* Autodesk-iOSViewer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E614B7AB192B2C9A00925CC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E614B77A192B2C9A00925CC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E614B781192B2C9A00925CC5;
+			remoteInfo = iOSReCap;
+		};
+		E69CDA5E1939BBAB0042374B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E69CDA571939BBAB0042374B /* Autodesk-ReCap.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E69CDA0E1939B78E0042374B;
+			remoteInfo = "Autodesk-ReCap";
+		};
+		E69CDA601939BBAB0042374B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E69CDA571939BBAB0042374B /* Autodesk-ReCap.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E69CDA1E1939B78E0042374B;
+			remoteInfo = "Autodesk-ReCapTests";
+		};
+		E69CDA621939BBAB0042374B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E69CDA571939BBAB0042374B /* Autodesk-ReCap.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E69CDA3F1939B82C0042374B;
+			remoteInfo = "Autodesk-ReCap-Resources";
+		};
+		E69CDA641939BBC60042374B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E69CDA571939BBAB0042374B /* Autodesk-ReCap.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E69CDA371939B8080042374B;
+			remoteInfo = "Autodesk-ReCap.framework";
+		};
+		E6FE30D8193268A8001B8589 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6FE30D1193268A8001B8589 /* Autodesk-oAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E6FE30791931D139001B8589;
+			remoteInfo = "Autodesk-oAuth";
+		};
+		E6FE30DA193268A8001B8589 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6FE30D1193268A8001B8589 /* Autodesk-oAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E6FE30891931D139001B8589;
+			remoteInfo = "Autodesk-oAuthTests";
+		};
+		E6FE30DC193268A8001B8589 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6FE30D1193268A8001B8589 /* Autodesk-oAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E6FE30B81931D655001B8589;
+			remoteInfo = "Autodesk-oAuth-Resources";
+		};
+		E6FE30E5193268E3001B8589 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6FE30DE193268E3001B8589 /* Autodesk-iOSViewer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E61A19161928C4D8002A47C5;
+			remoteInfo = "Autodesk-iOSViewer";
+		};
+		E6FE30E7193268E3001B8589 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6FE30DE193268E3001B8589 /* Autodesk-iOSViewer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E61A19261928C4D8002A47C5;
+			remoteInfo = "Autodesk-iOSViewerTests";
+		};
+		E6FE30E9193268E3001B8589 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6FE30DE193268E3001B8589 /* Autodesk-iOSViewer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E61A19611928CEBD002A47C5;
+			remoteInfo = "Autodesk-iOSViewer-Resources";
+		};
+		E6FE30EB193268F7001B8589 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6FE30DE193268E3001B8589 /* Autodesk-iOSViewer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E61A19561928CA9A002A47C5;
+			remoteInfo = "Autodesk-iOSViewer.framework";
+		};
+		E6FE30ED193268FC001B8589 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6FE30D1193268A8001B8589 /* Autodesk-oAuth.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E6FE30A81931D310001B8589;
+			remoteInfo = "Autodesk-oAuth.framework";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		58E7B7E2FC8243CCAE7E6532 /* Pods-iOSReCap.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSReCap.xcconfig"; path = "../Pods/Pods-iOSReCap.xcconfig"; sourceTree = "<group>"; };
+		DF2231C4C9BE4B58BE4F952E /* libPods-iOSReCap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSReCap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E614B782192B2C9A00925CC5 /* iOSReCap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSReCap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E614B785192B2C9A00925CC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E614B787192B2C9A00925CC5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E614B789192B2C9A00925CC5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E614B78D192B2C9A00925CC5 /* iOSReCap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSReCap-Info.plist"; sourceTree = "<group>"; };
+		E614B78F192B2C9A00925CC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E614B791192B2C9A00925CC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E614B793192B2C9A00925CC5 /* iOSReCap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSReCap-Prefix.pch"; sourceTree = "<group>"; };
+		E614B794192B2C9A00925CC5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E614B795192B2C9A00925CC5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E614B798192B2C9A00925CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		E614B79B192B2C9A00925CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		E614B79D192B2C9A00925CC5 /* PhotoScenesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoScenesController.h; sourceTree = "<group>"; };
+		E614B79E192B2C9A00925CC5 /* PhotoScenesController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PhotoScenesController.mm; sourceTree = "<group>"; };
+		E614B7A0192B2C9A00925CC5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E614B7A6192B2C9A00925CC5 /* iOSReCapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSReCapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E614B7A7192B2C9A00925CC5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E614B7AF192B2C9A00925CC5 /* iOSReCapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSReCapTests-Info.plist"; sourceTree = "<group>"; };
+		E614B7B1192B2C9A00925CC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E614B7B3192B2C9A00925CC5 /* iOSReCapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSReCapTests.m; sourceTree = "<group>"; };
+		E690D59619446D4500D651AD /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		E690D59719446D4500D651AD /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		E690D5A219446D9000D651AD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E690D5A41944781400D651AD /* faceDetector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = faceDetector.png; path = iOSReCap/Images/faceDetector.png; sourceTree = "<group>"; };
+		E690D5A6194483C900D651AD /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		E690D5A819448E4B00D651AD /* AdskUIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AdskUIImage+Additions.h"; sourceTree = "<group>"; };
+		E690D5A919448E4B00D651AD /* AdskUIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AdskUIImage+Additions.m"; sourceTree = "<group>"; };
+		E690D5AB1944CE0000D651AD /* ALAssetsLibrary+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+Additions.h"; sourceTree = "<group>"; };
+		E690D5AC1944CE0000D651AD /* ALAssetsLibrary+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+Additions.m"; sourceTree = "<group>"; };
+		E690D5AE1944D67700D651AD /* photos-sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "photos-sel.png"; path = "iOSReCap/Images/photos-sel.png"; sourceTree = "<group>"; };
+		E690D5AF1944D67700D651AD /* photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = photos.png; path = iOSReCap/Images/photos.png; sourceTree = "<group>"; };
+		E692EE51194214D200054BB0 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = refresh.png; path = iOSReCap/Images/refresh.png; sourceTree = "<group>"; };
+		E692EE5719437AD600054BB0 /* cam-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cam-black.png"; path = "iOSReCap/Images/cam-black.png"; sourceTree = "<group>"; };
+		E692EE5819437AD600054BB0 /* camera-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-black.png"; path = "iOSReCap/Images/camera-black.png"; sourceTree = "<group>"; };
+		E692EE5919437AD600054BB0 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = iOSReCap/Images/camera.png; sourceTree = "<group>"; };
+		E69A45891939DCAB00F93483 /* Autodesk-ReCap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Autodesk-ReCap.framework"; path = "../Build/Products/Debug-iphoneos/Autodesk-ReCap.framework"; sourceTree = "<group>"; };
+		E69CD9FF1938E0CD0042374B /* PhotoScenesItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoScenesItem.h; sourceTree = "<group>"; };
+		E69CDA001938E0CD0042374B /* PhotoScenesItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PhotoScenesItem.mm; sourceTree = "<group>"; };
+		E69CDA031938EAD90042374B /* ReCap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ReCap.jpg; path = iOSReCap/Images/ReCap.jpg; sourceTree = "<group>"; };
+		E69CDA571939BBAB0042374B /* Autodesk-ReCap.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Autodesk-ReCap.xcodeproj"; path = "../Autodesk-ReCap/Autodesk-ReCap.xcodeproj"; sourceTree = "<group>"; };
+		E6A6DD8819476E43004FB2B1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		E6A6DD98194794A6004FB2B1 /* Autodesk-iOSViewer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "Autodesk-iOSViewer.bundle"; path = "../../Build/Products/Debug-iphonesimulator/Autodesk-iOSViewer.framework/Versions/A/Resources/Autodesk-iOSViewer.bundle"; sourceTree = "<group>"; };
+		E6A6DDAB1948A753004FB2B1 /* UserSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserSettings.h; sourceTree = "<group>"; };
+		E6A6DDAC1948A79C004FB2B1 /* _UserSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _UserSettings.h; sourceTree = "<group>"; };
+		E6B8348C1946043C00DDD174 /* Add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Add.png; path = iOSReCap/Images/Add.png; sourceTree = "<group>"; };
+		E6B834971946123200DDD174 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logout.png; path = iOSReCap/Images/logout.png; sourceTree = "<group>"; };
+		E6B834991946128700DDD174 /* Process.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Process.png; path = iOSReCap/Images/Process.png; sourceTree = "<group>"; };
+		E6B8349B194639B400DDD174 /* 3dviewer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3dviewer.png; path = iOSReCap/Images/3dviewer.png; sourceTree = "<group>"; };
+		E6FE30CC19320EB1001B8589 /* Autodesk-oAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Autodesk-oAuth.framework"; path = "../Build/Products/Debug-iphoneos/Autodesk-oAuth.framework"; sourceTree = "<group>"; };
+		E6FE30CE19321212001B8589 /* Autodesk-iOSViewer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Autodesk-iOSViewer.framework"; path = "../Build/Products/Debug-iphoneos/Autodesk-iOSViewer.framework"; sourceTree = "<group>"; };
+		E6FE30D1193268A8001B8589 /* Autodesk-oAuth.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Autodesk-oAuth.xcodeproj"; path = "../Autodesk-oAuth/Autodesk-oAuth.xcodeproj"; sourceTree = "<group>"; };
+		E6FE30DE193268E3001B8589 /* Autodesk-iOSViewer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Autodesk-iOSViewer.xcodeproj"; path = "../Autodesk-iOSViewer/Autodesk-iOSViewer.xcodeproj"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E614B77F192B2C9A00925CC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6A6DD8919476E43004FB2B1 /* libz.dylib in Frameworks */,
+				E690D5A7194483C900D651AD /* AssetsLibrary.framework in Frameworks */,
+				E690D5A319446D9000D651AD /* AVFoundation.framework in Frameworks */,
+				E69A458A1939DCAB00F93483 /* Autodesk-ReCap.framework in Frameworks */,
+				E6FE30D019321DD7001B8589 /* Autodesk-iOSViewer.framework in Frameworks */,
+				E6FE30CD19320EB1001B8589 /* Autodesk-oAuth.framework in Frameworks */,
+				E614B788192B2C9A00925CC5 /* CoreGraphics.framework in Frameworks */,
+				E614B78A192B2C9A00925CC5 /* UIKit.framework in Frameworks */,
+				E614B786192B2C9A00925CC5 /* Foundation.framework in Frameworks */,
+				D8F0041B61224F39B0BB0C4F /* libPods-iOSReCap.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E614B7A3192B2C9A00925CC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E614B7A8192B2C9A00925CC5 /* XCTest.framework in Frameworks */,
+				E614B7AA192B2C9A00925CC5 /* UIKit.framework in Frameworks */,
+				E614B7A9192B2C9A00925CC5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E614B779192B2C9A00925CC5 = {
+			isa = PBXGroup;
+			children = (
+				E69CDA571939BBAB0042374B /* Autodesk-ReCap.xcodeproj */,
+				E6FE30DE193268E3001B8589 /* Autodesk-iOSViewer.xcodeproj */,
+				E6FE30D1193268A8001B8589 /* Autodesk-oAuth.xcodeproj */,
+				E69CDA021938E7A10042374B /* Images */,
+				E614B78B192B2C9A00925CC5 /* iOSReCap */,
+				E614B7AD192B2C9A00925CC5 /* iOSReCapTests */,
+				E614B784192B2C9A00925CC5 /* Frameworks */,
+				E614B783192B2C9A00925CC5 /* Products */,
+				58E7B7E2FC8243CCAE7E6532 /* Pods-iOSReCap.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		E614B783192B2C9A00925CC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E614B782192B2C9A00925CC5 /* iOSReCap.app */,
+				E614B7A6192B2C9A00925CC5 /* iOSReCapTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E614B784192B2C9A00925CC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6A6DD8819476E43004FB2B1 /* libz.dylib */,
+				E690D5A6194483C900D651AD /* AssetsLibrary.framework */,
+				E690D5A219446D9000D651AD /* AVFoundation.framework */,
+				E69A45891939DCAB00F93483 /* Autodesk-ReCap.framework */,
+				E6FE30CE19321212001B8589 /* Autodesk-iOSViewer.framework */,
+				E6FE30CC19320EB1001B8589 /* Autodesk-oAuth.framework */,
+				E614B785192B2C9A00925CC5 /* Foundation.framework */,
+				E614B787192B2C9A00925CC5 /* CoreGraphics.framework */,
+				E614B789192B2C9A00925CC5 /* UIKit.framework */,
+				E614B7A7192B2C9A00925CC5 /* XCTest.framework */,
+				DF2231C4C9BE4B58BE4F952E /* libPods-iOSReCap.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E614B78B192B2C9A00925CC5 /* iOSReCap */ = {
+			isa = PBXGroup;
+			children = (
+				E6A6DDAB1948A753004FB2B1 /* UserSettings.h */,
+				E6A6DDAC1948A79C004FB2B1 /* _UserSettings.h */,
+				E6A6DD9719479470004FB2B1 /* Framework Bundles */,
+				E690D5AB1944CE0000D651AD /* ALAssetsLibrary+Additions.h */,
+				E690D5AC1944CE0000D651AD /* ALAssetsLibrary+Additions.m */,
+				E690D5A819448E4B00D651AD /* AdskUIImage+Additions.h */,
+				E690D5A919448E4B00D651AD /* AdskUIImage+Additions.m */,
+				E614B794192B2C9A00925CC5 /* AppDelegate.h */,
+				E614B795192B2C9A00925CC5 /* AppDelegate.m */,
+				E614B797192B2C9A00925CC5 /* Main_iPhone.storyboard */,
+				E614B79A192B2C9A00925CC5 /* Main_iPad.storyboard */,
+				E614B79D192B2C9A00925CC5 /* PhotoScenesController.h */,
+				E614B79E192B2C9A00925CC5 /* PhotoScenesController.mm */,
+				E69CD9FF1938E0CD0042374B /* PhotoScenesItem.h */,
+				E69CDA001938E0CD0042374B /* PhotoScenesItem.mm */,
+				E690D59619446D4500D651AD /* CameraViewController.h */,
+				E690D59719446D4500D651AD /* CameraViewController.m */,
+				E614B7A0192B2C9A00925CC5 /* Images.xcassets */,
+				E614B78C192B2C9A00925CC5 /* Supporting Files */,
+			);
+			path = iOSReCap;
+			sourceTree = "<group>";
+		};
+		E614B78C192B2C9A00925CC5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E614B78D192B2C9A00925CC5 /* iOSReCap-Info.plist */,
+				E614B78E192B2C9A00925CC5 /* InfoPlist.strings */,
+				E614B791192B2C9A00925CC5 /* main.m */,
+				E614B793192B2C9A00925CC5 /* iOSReCap-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E614B7AD192B2C9A00925CC5 /* iOSReCapTests */ = {
+			isa = PBXGroup;
+			children = (
+				E614B7B3192B2C9A00925CC5 /* iOSReCapTests.m */,
+				E614B7AE192B2C9A00925CC5 /* Supporting Files */,
+			);
+			path = iOSReCapTests;
+			sourceTree = "<group>";
+		};
+		E614B7AE192B2C9A00925CC5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E614B7AF192B2C9A00925CC5 /* iOSReCapTests-Info.plist */,
+				E614B7B0192B2C9A00925CC5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E69CDA021938E7A10042374B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E6B8349B194639B400DDD174 /* 3dviewer.png */,
+				E6B834991946128700DDD174 /* Process.png */,
+				E6B834971946123200DDD174 /* logout.png */,
+				E6B8348C1946043C00DDD174 /* Add.png */,
+				E690D5AE1944D67700D651AD /* photos-sel.png */,
+				E690D5AF1944D67700D651AD /* photos.png */,
+				E690D5A41944781400D651AD /* faceDetector.png */,
+				E692EE5719437AD600054BB0 /* cam-black.png */,
+				E692EE5819437AD600054BB0 /* camera-black.png */,
+				E692EE5919437AD600054BB0 /* camera.png */,
+				E692EE51194214D200054BB0 /* refresh.png */,
+				E69CDA031938EAD90042374B /* ReCap.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		E69CDA581939BBAB0042374B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E69CDA5F1939BBAB0042374B /* libAutodesk-ReCap.a */,
+				E69CDA611939BBAB0042374B /* Autodesk-ReCapTests.xctest */,
+				E69CDA631939BBAB0042374B /* Autodesk-ReCap.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6A6DD9719479470004FB2B1 /* Framework Bundles */ = {
+			isa = PBXGroup;
+			children = (
+				E6A6DD98194794A6004FB2B1 /* Autodesk-iOSViewer.bundle */,
+			);
+			name = "Framework Bundles";
+			sourceTree = "<group>";
+		};
+		E6FE30D2193268A8001B8589 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6FE30D9193268A8001B8589 /* libAutodesk-oAuth.a */,
+				E6FE30DB193268A8001B8589 /* Autodesk-oAuthTests.xctest */,
+				E6FE30DD193268A8001B8589 /* Autodesk-oAuth.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6FE30DF193268E3001B8589 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6FE30E6193268E3001B8589 /* libAutodesk-iOSViewer.a */,
+				E6FE30E8193268E3001B8589 /* Autodesk-iOSViewerTests.xctest */,
+				E6FE30EA193268E3001B8589 /* Autodesk-iOSViewer.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E614B781192B2C9A00925CC5 /* iOSReCap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E614B7B7192B2C9A00925CC5 /* Build configuration list for PBXNativeTarget "iOSReCap" */;
+			buildPhases = (
+				CFB6F4AFBE974C6EB036DFBA /* Check Pods Manifest.lock */,
+				E614B77E192B2C9A00925CC5 /* Sources */,
+				E614B77F192B2C9A00925CC5 /* Frameworks */,
+				E614B780192B2C9A00925CC5 /* Resources */,
+				85E7EFC963374C46A6264282 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E69CDA651939BBC60042374B /* PBXTargetDependency */,
+				E6FE30EE193268FC001B8589 /* PBXTargetDependency */,
+				E6FE30EC193268F7001B8589 /* PBXTargetDependency */,
+			);
+			name = iOSReCap;
+			productName = iOSReCap;
+			productReference = E614B782192B2C9A00925CC5 /* iOSReCap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E614B7A5192B2C9A00925CC5 /* iOSReCapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E614B7BA192B2C9A00925CC5 /* Build configuration list for PBXNativeTarget "iOSReCapTests" */;
+			buildPhases = (
+				E614B7A2192B2C9A00925CC5 /* Sources */,
+				E614B7A3192B2C9A00925CC5 /* Frameworks */,
+				E614B7A4192B2C9A00925CC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E614B7AC192B2C9A00925CC5 /* PBXTargetDependency */,
+			);
+			name = iOSReCapTests;
+			productName = iOSReCapTests;
+			productReference = E614B7A6192B2C9A00925CC5 /* iOSReCapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E614B77A192B2C9A00925CC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Autodesk;
+				TargetAttributes = {
+					E614B7A5192B2C9A00925CC5 = {
+						TestTargetID = E614B781192B2C9A00925CC5;
+					};
+				};
+			};
+			buildConfigurationList = E614B77D192B2C9A00925CC5 /* Build configuration list for PBXProject "iOSReCap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E614B779192B2C9A00925CC5;
+			productRefGroup = E614B783192B2C9A00925CC5 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E6FE30DF193268E3001B8589 /* Products */;
+					ProjectRef = E6FE30DE193268E3001B8589 /* Autodesk-iOSViewer.xcodeproj */;
+				},
+				{
+					ProductGroup = E6FE30D2193268A8001B8589 /* Products */;
+					ProjectRef = E6FE30D1193268A8001B8589 /* Autodesk-oAuth.xcodeproj */;
+				},
+				{
+					ProductGroup = E69CDA581939BBAB0042374B /* Products */;
+					ProjectRef = E69CDA571939BBAB0042374B /* Autodesk-ReCap.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E614B781192B2C9A00925CC5 /* iOSReCap */,
+				E614B7A5192B2C9A00925CC5 /* iOSReCapTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E69CDA5F1939BBAB0042374B /* libAutodesk-ReCap.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAutodesk-ReCap.a";
+			remoteRef = E69CDA5E1939BBAB0042374B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E69CDA611939BBAB0042374B /* Autodesk-ReCapTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Autodesk-ReCapTests.xctest";
+			remoteRef = E69CDA601939BBAB0042374B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E69CDA631939BBAB0042374B /* Autodesk-ReCap.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Autodesk-ReCap.bundle";
+			remoteRef = E69CDA621939BBAB0042374B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E6FE30D9193268A8001B8589 /* libAutodesk-oAuth.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAutodesk-oAuth.a";
+			remoteRef = E6FE30D8193268A8001B8589 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E6FE30DB193268A8001B8589 /* Autodesk-oAuthTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Autodesk-oAuthTests.xctest";
+			remoteRef = E6FE30DA193268A8001B8589 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E6FE30DD193268A8001B8589 /* Autodesk-oAuth.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Autodesk-oAuth.bundle";
+			remoteRef = E6FE30DC193268A8001B8589 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E6FE30E6193268E3001B8589 /* libAutodesk-iOSViewer.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAutodesk-iOSViewer.a";
+			remoteRef = E6FE30E5193268E3001B8589 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E6FE30E8193268E3001B8589 /* Autodesk-iOSViewerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Autodesk-iOSViewerTests.xctest";
+			remoteRef = E6FE30E7193268E3001B8589 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E6FE30EA193268E3001B8589 /* Autodesk-iOSViewer.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Autodesk-iOSViewer.bundle";
+			remoteRef = E6FE30E9193268E3001B8589 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E614B780192B2C9A00925CC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E690D5A51944781400D651AD /* faceDetector.png in Resources */,
+				E614B79C192B2C9A00925CC5 /* Main_iPad.storyboard in Resources */,
+				E6B834981946123200DDD174 /* logout.png in Resources */,
+				E692EE5B19437AD600054BB0 /* camera-black.png in Resources */,
+				E69CDA041938EAD90042374B /* ReCap.jpg in Resources */,
+				E692EE5C19437AD600054BB0 /* camera.png in Resources */,
+				E692EE5A19437AD600054BB0 /* cam-black.png in Resources */,
+				E692EE52194214D200054BB0 /* refresh.png in Resources */,
+				E6B8349C194639B400DDD174 /* 3dviewer.png in Resources */,
+				E614B7A1192B2C9A00925CC5 /* Images.xcassets in Resources */,
+				E6B8348D1946043C00DDD174 /* Add.png in Resources */,
+				E690D5B11944D67700D651AD /* photos.png in Resources */,
+				E6A6DD99194794A6004FB2B1 /* Autodesk-iOSViewer.bundle in Resources */,
+				E614B799192B2C9A00925CC5 /* Main_iPhone.storyboard in Resources */,
+				E6B8349A1946128700DDD174 /* Process.png in Resources */,
+				E614B790192B2C9A00925CC5 /* InfoPlist.strings in Resources */,
+				E690D5B01944D67700D651AD /* photos-sel.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E614B7A4192B2C9A00925CC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E614B7B2192B2C9A00925CC5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		85E7EFC963374C46A6264282 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Pods-iOSReCap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFB6F4AFBE974C6EB036DFBA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E614B77E192B2C9A00925CC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E690D5AD1944CE0000D651AD /* ALAssetsLibrary+Additions.m in Sources */,
+				E614B79F192B2C9A00925CC5 /* PhotoScenesController.mm in Sources */,
+				E614B796192B2C9A00925CC5 /* AppDelegate.m in Sources */,
+				E690D5AA19448E4B00D651AD /* AdskUIImage+Additions.m in Sources */,
+				E69CDA011938E0CD0042374B /* PhotoScenesItem.mm in Sources */,
+				E690D59819446D4500D651AD /* CameraViewController.m in Sources */,
+				E614B792192B2C9A00925CC5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E614B7A2192B2C9A00925CC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E614B7B4192B2C9A00925CC5 /* iOSReCapTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E614B7AC192B2C9A00925CC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E614B781192B2C9A00925CC5 /* iOSReCap */;
+			targetProxy = E614B7AB192B2C9A00925CC5 /* PBXContainerItemProxy */;
+		};
+		E69CDA651939BBC60042374B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Autodesk-ReCap.framework";
+			targetProxy = E69CDA641939BBC60042374B /* PBXContainerItemProxy */;
+		};
+		E6FE30EC193268F7001B8589 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Autodesk-iOSViewer.framework";
+			targetProxy = E6FE30EB193268F7001B8589 /* PBXContainerItemProxy */;
+		};
+		E6FE30EE193268FC001B8589 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Autodesk-oAuth.framework";
+			targetProxy = E6FE30ED193268FC001B8589 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E614B78E192B2C9A00925CC5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E614B78F192B2C9A00925CC5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E614B797192B2C9A00925CC5 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E614B798192B2C9A00925CC5 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		E614B79A192B2C9A00925CC5 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E614B79B192B2C9A00925CC5 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		E614B7B0192B2C9A00925CC5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E614B7B1192B2C9A00925CC5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E614B7B5192B2C9A00925CC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E614B7B6192B2C9A00925CC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E614B7B8192B2C9A00925CC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58E7B7E2FC8243CCAE7E6532 /* Pods-iOSReCap.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				Autodesk = "";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/cyrille/Projects/Autodesk-ReCap-Samples/iOS/Build/Products/Debug-iphoneos",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSReCap/iOSReCap-Prefix.pch";
+				INFOPLIST_FILE = "iOSReCap/iOSReCap-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lstdc++",
+					"-all_load",
+					"-framework",
+					CFNetwork,
+					"-framework",
+					CoreData,
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					MobileCoreServices,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E614B7B9192B2C9A00925CC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58E7B7E2FC8243CCAE7E6532 /* Pods-iOSReCap.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				Autodesk = "";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/cyrille/Projects/Autodesk-ReCap-Samples/iOS/Build/Products/Debug-iphoneos",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSReCap/iOSReCap-Prefix.pch";
+				INFOPLIST_FILE = "iOSReCap/iOSReCap-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lstdc++",
+					"-all_load",
+					"-framework",
+					CFNetwork,
+					"-framework",
+					CoreData,
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					MobileCoreServices,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E614B7BB192B2C9A00925CC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOSReCap.app/iOSReCap";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSReCap/iOSReCap-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iOSReCapTests/iOSReCapTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E614B7BC192B2C9A00925CC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOSReCap.app/iOSReCap";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSReCap/iOSReCap-Prefix.pch";
+				INFOPLIST_FILE = "iOSReCapTests/iOSReCapTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E614B77D192B2C9A00925CC5 /* Build configuration list for PBXProject "iOSReCap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E614B7B5192B2C9A00925CC5 /* Debug */,
+				E614B7B6192B2C9A00925CC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E614B7B7192B2C9A00925CC5 /* Build configuration list for PBXNativeTarget "iOSReCap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E614B7B8192B2C9A00925CC5 /* Debug */,
+				E614B7B9192B2C9A00925CC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E614B7BA192B2C9A00925CC5 /* Build configuration list for PBXNativeTarget "iOSReCapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E614B7BB192B2C9A00925CC5 /* Debug */,
+				E614B7BC192B2C9A00925CC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E614B77A192B2C9A00925CC5 /* Project object */;
+}

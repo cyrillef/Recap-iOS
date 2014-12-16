@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="jyV-25-S7z">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--PhotoScenes Master-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="PhotoScenes Master" customClass="PhotoScenesController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ysv-p1-XPP">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoScenesItem" rowHeight="110" id="D1C-XJ-UG6" customClass="PhotoScenesItem">
+                                <rect key="frame" x="0.0" y="86" width="768" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D1C-XJ-UG6" id="7qj-jF-GJK">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="109"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i6A-61-0Nk" userLabel="PhotoScene Preview">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="110" id="keC-pv-glG"/>
+                                                <constraint firstAttribute="width" constant="110" id="mP8-cS-pko"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDa-MS-hsw" userLabel="PhotoScene Name">
+                                            <rect key="frame" x="118" y="8" width="44" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzA-Yd-TEC" userLabel="Status">
+                                            <rect key="frame" x="118" y="37" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THG-Kb-1Ox" userLabel="Refresh Properties">
+                                            <rect key="frame" x="697" y="114" width="64" height="64"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="64" id="tN4-Z5-afa"/>
+                                                <constraint firstAttribute="height" constant="64" id="u94-xA-MVg"/>
+                                            </constraints>
+                                            <state key="normal" image="refresh.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="refresh:" destination="D1C-XJ-UG6" eventType="touchDown" id="VjZ-ls-14s"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaL-gB-QiU" userLabel="Camera">
+                                            <rect key="frame" x="697" y="185" width="64" height="64"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="64" id="5ek-QM-qJ7"/>
+                                                <constraint firstAttribute="width" constant="64" id="eJc-Lt-k9g"/>
+                                            </constraints>
+                                            <state key="normal" image="camera-black.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="gMc-U8-CsG" kind="modal" identifier="Camera" id="pKs-dC-lNZ"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3o-fL-ssb" userLabel="Photos">
+                                            <rect key="frame" x="697" y="256" width="64" height="64"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="64" id="5IP-KH-xkK"/>
+                                                <constraint firstAttribute="width" constant="64" id="Iy7-4P-afJ"/>
+                                            </constraints>
+                                            <state key="normal" image="photos-sel.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="selectPhotos:" destination="D1C-XJ-UG6" eventType="touchDown" id="Vyr-hM-kaC"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jI-RZ-UzM" userLabel="Process">
+                                            <rect key="frame" x="697" y="327" width="64" height="64"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="64" id="1dH-5O-huR"/>
+                                                <constraint firstAttribute="width" constant="64" id="g9U-Oi-38s"/>
+                                            </constraints>
+                                            <state key="normal" image="Process.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="processPhotoscene:" destination="D1C-XJ-UG6" eventType="touchDown" id="OVf-Jl-Zmj"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aM-A1-f4P" userLabel="Preview">
+                                            <rect key="frame" x="697" y="398" width="64" height="64"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="64" id="MRY-HC-J1a"/>
+                                                <constraint firstAttribute="height" constant="64" id="oZc-s4-QZq"/>
+                                            </constraints>
+                                            <state key="normal" image="3dviewer.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="preview:" destination="D1C-XJ-UG6" eventType="touchDown" id="jHV-6Q-XEB"/>
+                                            </connections>
+                                        </button>
+                                        <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="w4m-kC-zrf" userLabel="Progress">
+                                            <rect key="frame" x="118" y="90" width="643" height="2"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" red="1" green="0.032541817489993408" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </progressView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="THG-Kb-1Ox" firstAttribute="top" secondItem="7qj-jF-GJK" secondAttribute="top" constant="114" id="5Cz-Bb-qN5"/>
+                                        <constraint firstItem="NzA-Yd-TEC" firstAttribute="leading" secondItem="7qj-jF-GJK" secondAttribute="leading" constant="118" id="899-yc-JMf"/>
+                                        <constraint firstAttribute="trailing" secondItem="NaL-gB-QiU" secondAttribute="trailing" constant="7" id="AJ0-7Q-Q7y"/>
+                                        <constraint firstItem="NzA-Yd-TEC" firstAttribute="top" secondItem="7qj-jF-GJK" secondAttribute="top" constant="37" id="BGw-IL-vZ5"/>
+                                        <constraint firstAttribute="trailing" secondItem="w4m-kC-zrf" secondAttribute="trailing" constant="7" id="C70-TQ-iD9"/>
+                                        <constraint firstItem="i6A-61-0Nk" firstAttribute="top" secondItem="7qj-jF-GJK" secondAttribute="top" id="CZV-Yz-u9C"/>
+                                        <constraint firstItem="w4m-kC-zrf" firstAttribute="top" secondItem="7qj-jF-GJK" secondAttribute="top" constant="90" id="D2Y-Cq-CVK"/>
+                                        <constraint firstAttribute="trailing" secondItem="w3o-fL-ssb" secondAttribute="trailing" constant="7" id="GKH-jE-2WE"/>
+                                        <constraint firstAttribute="trailing" secondItem="3jI-RZ-UzM" secondAttribute="trailing" constant="7" id="MO1-bj-hUi"/>
+                                        <constraint firstItem="3jI-RZ-UzM" firstAttribute="top" secondItem="7qj-jF-GJK" secondAttribute="top" constant="327" id="Pl1-es-jWc"/>
+                                        <constraint firstItem="w3o-fL-ssb" firstAttribute="top" secondItem="7qj-jF-GJK" secondAttribute="top" constant="256" id="Ufd-jn-lfc"/>
+                                        <constraint firstItem="rDa-MS-hsw" firstAttribute="top" secondItem="7qj-jF-GJK" secondAttribute="top" constant="8" id="Woa-ih-Phr"/>
+                                        <constraint firstItem="i6A-61-0Nk" firstAttribute="leading" secondItem="7qj-jF-GJK" secondAttribute="leading" id="XWo-JK-84t"/>
+                                        <constraint firstAttribute="trailing" secondItem="8aM-A1-f4P" secondAttribute="trailing" constant="7" id="ZQp-6k-6lH"/>
+                                        <constraint firstItem="NaL-gB-QiU" firstAttribute="top" secondItem="7qj-jF-GJK" secondAttribute="top" constant="185" id="bEY-r1-RYL"/>
+                                        <constraint firstItem="rDa-MS-hsw" firstAttribute="leading" secondItem="7qj-jF-GJK" secondAttribute="leading" constant="118" id="btB-xS-3Z9"/>
+                                        <constraint firstItem="8aM-A1-f4P" firstAttribute="top" secondItem="7qj-jF-GJK" secondAttribute="top" constant="398" id="q0G-xy-1cX"/>
+                                        <constraint firstItem="w4m-kC-zrf" firstAttribute="leading" secondItem="7qj-jF-GJK" secondAttribute="leading" constant="118" id="ro5-H8-ygN"/>
+                                        <constraint firstAttribute="trailing" secondItem="THG-Kb-1Ox" secondAttribute="trailing" constant="7" id="yCb-px-FW9"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="_cameraButton" destination="NaL-gB-QiU" id="JJA-mu-66m"/>
+                                    <outlet property="_nameLabel" destination="rDa-MS-hsw" id="SOq-XP-zmg"/>
+                                    <outlet property="_photosButton" destination="w3o-fL-ssb" id="4Ry-u1-7bS"/>
+                                    <outlet property="_previewButton" destination="8aM-A1-f4P" id="R4s-mh-wYK"/>
+                                    <outlet property="_processButton" destination="3jI-RZ-UzM" id="rPa-si-FBU"/>
+                                    <outlet property="_progressBar" destination="w4m-kC-zrf" id="5N2-19-AUB"/>
+                                    <outlet property="_refreshButton" destination="THG-Kb-1Ox" id="e6x-Cl-e38"/>
+                                    <outlet property="_statusLabel" destination="NzA-Yd-TEC" id="Fpb-At-lU7"/>
+                                    <outlet property="_thumbnailImage" destination="i6A-61-0Nk" id="wzy-um-2v4"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BYZ-38-t0r" id="VSe-db-Ygg"/>
+                            <outlet property="delegate" destination="BYZ-38-t0r" id="Uam-h4-8nm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Photo Scenes" id="30o-bK-kFK">
+                        <barButtonItem key="backBarButtonItem" image="logout.png" id="yoy-bZ-ELe" userLabel="LogOut">
+                            <connections>
+                                <action selector="logout:" destination="BYZ-38-t0r" id="l1c-9Q-MMF"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="Add.png" id="9hC-wy-IQT" userLabel="Add">
+                            <connections>
+                                <action selector="createPhotoScene:" destination="BYZ-38-t0r" id="vor-3U-8vI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="_addButton" destination="9hC-wy-IQT" id="Y0S-eh-QS6"/>
+                        <outlet property="_logoutButton" destination="yoy-bZ-ELe" id="d1Z-gh-SJ8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="816" y="-90"/>
+        </scene>
+        <!--Camera Controller-->
+        <scene sceneID="T1T-AL-INH">
+            <objects>
+                <viewController id="gMc-U8-CsG" userLabel="Camera Controller" customClass="CameraViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j1r-NU-KCy"/>
+                        <viewControllerLayoutGuide type="bottom" id="uoN-1M-4tE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KUb-H2-Y0b">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2E6-O5-luv">
+                                <rect key="frame" x="-1" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="AWH-pX-j35" appends="YES" id="AuM-xr-2P6"/>
+                                    <outletCollection property="gestureRecognizers" destination="nCx-Ua-k3q" appends="YES" id="xsi-Qi-8xt"/>
+                                    <outletCollection property="gestureRecognizers" destination="oJ6-yM-zGB" appends="YES" id="GOv-Ku-dEA"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="_previewView" destination="2E6-O5-luv" id="GtQ-Mw-B1b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="siO-qS-mdX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="AWH-pX-j35">
+                    <connections>
+                        <action selector="handlePinchGesture:" destination="gMc-U8-CsG" id="gA2-pG-QoO"/>
+                        <outlet property="delegate" destination="gMc-U8-CsG" id="ffG-9o-afz"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="nCx-Ua-k3q">
+                    <connections>
+                        <action selector="handleSwipeGesture:" destination="gMc-U8-CsG" id="fjm-uB-7lS"/>
+                        <outlet property="delegate" destination="gMc-U8-CsG" id="DZR-aL-IPQ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="oJ6-yM-zGB">
+                    <connections>
+                        <action selector="handleTapGesture:" destination="gMc-U8-CsG" id="ySJ-LV-Xxx"/>
+                        <outlet property="delegate" destination="gMc-U8-CsG" id="xbU-fv-vkB"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1813" y="-344"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tfm-dU-ilI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jyV-25-S7z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tGY-Yf-9Uw">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GXd-yh-O1Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0rr-Vl-DWX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-192" y="-90"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="3dviewer.png" width="64" height="64"/>
+        <image name="Add.png" width="24" height="24"/>
+        <image name="Process.png" width="64" height="64"/>
+        <image name="camera-black.png" width="256" height="256"/>
+        <image name="logout.png" width="24" height="24"/>
+        <image name="photos-sel.png" width="256" height="256"/>
+        <image name="refresh.png" width="330" height="330"/>
+    </resources>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
