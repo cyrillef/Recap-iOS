@@ -20,20 +20,20 @@ You can update/install them automatically via CocoaPods. Visit http://cocoapods.
 1. The RestKit pod
 
      RestKit is a framework for consuming and modelling RESTful web resources on iOS and OS X.
-	 you need at least version 0.23. pod 'RestKit', '~> 0.23'
+	 you need at least version 0.26.0. pod 'RestKit', '~> 0.26.0'
 	 http://cocoapods.org/?q=restkit
 
 2. The ZipKit pod
 
      An Objective-C Zip framework for Mac OS X and iOS.
-	 you need at least version 1.0. pod 'ZipKit', '~> 1.0'
+	 you need at least version 1.0.3. pod 'ZipKit', '1.0.3'
 	 http://cocoapods.org/?q=zipkit
 
 
 3. The AFOAuth1Client pod
 
      AFNetworking Extension for OAuth 1.0a Authentication.
-	 you need at least version 0.3. pod 'AFOAuth1Client', '~> 0.3'
+	 you need at least version 1.0.0. pod 'AFOAuth1Client', '1.0.0'
 	 http://cocoapods.org/?q=AFOAuth1Client
 
 	 
