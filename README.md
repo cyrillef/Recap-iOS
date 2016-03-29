@@ -2,7 +2,7 @@
 [![ReCap API](https://img.shields.io/badge/Recap%20API-3.1.0-blue.svg)](http://developer-recap-autodesk.github.io/)
 [![CocoaPods](https://img.shields.io/badge/cocoapods-0.39.0-blue.svg)](https://cocoapods.org/)
 ![Xcode](https://img.shields.io/badge/Xcode-7.2.1-green.svg)
-![Platforms](https://img.shields.io/badge/platform-osx%20El%20Capitan-lightgray.svg)
+![Platforms (El Capitan)](https://img.shields.io/badge/platform-iOS%209.x-lightgray.svg)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://opensource.org/licenses/MIT)
 
 
