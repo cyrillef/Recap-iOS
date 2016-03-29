@@ -42,7 +42,7 @@
 
 - (NSString *)RFC3986Decode {
     NSString *result =[(NSString *)self stringByReplacingOccurrencesOfString:@"+" withString:@" "] ;
-    result =[result stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding] ;
+    result =[result stringByRemovingPercentEncoding] ;
     return (result) ;
 }
 

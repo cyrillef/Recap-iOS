@@ -118,6 +118,9 @@
 	// in the default browser. Then here in our app request the user to type in that PIN.
 	if ( [self isOOB] ) {
 		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:path]] ;
+		//TODO: UIAlertView is deprecated, replace by a new View/Controller line #260
+		#pragma clang diagnostic push
+		#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 		UIAlertView *alert =[[UIAlertView alloc]
 							 initWithTitle:@"Authorization PIN"
 							 message:@"Please type here the authorization PIN!"
@@ -126,6 +129,7 @@
 							 otherButtonTitles:nil] ;
 		alert.alertViewStyle =UIAlertViewStylePlainTextInput ;
 		[alert show] ;
+		#pragma clang diagnostic pop
 	} else {
 		// Otherwise let's load the page in our web viewer so that
 		// we can catch the URL that it gets redirected to
@@ -140,8 +144,7 @@
 //- Third leg: The third step is to authenticate using the request tokens
 //- Once you get the access token and access token secret you need to use those to make your further REST calls
 //- Same in case of refreshing the access tokens or invalidating the current session. To do that we need to pass
-//- in the acccess token and access token secret as the accessToken and tokenSecret parameter of the
-//- [AdskRESTful URLRequestForPath] function
+//- in the acccess token and access token secret as the accessToken and tokenSecret parameter
 + (void)AccessToken:(BOOL)refresh PIN:(NSString *)PIN success:(void (^)())success failure:(void (^)(NSError *error))failure {
 	NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults] ;
 	AFOAuth1Token *tokens =[[AFOAuth1Token alloc] initWithKey:[defaults objectForKey:@"oauth_token"]
@@ -254,9 +257,12 @@
 }
 
 //- In case of out-of-band authorization this is where we continue once the user got the PIN
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
 	[AdskOAuthController AccessToken:NO PIN:[[alertView textFieldAtIndex:0] text] success:_success failure:_failure] ;
 }
+#pragma clang diagnostic pop
 
 //- Checks if we should use out-of-band authorization
 - (BOOL)isOOB {

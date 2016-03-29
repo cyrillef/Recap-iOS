@@ -15,6 +15,7 @@
 //
 #import "PhotoScenesItem.h"
 #import "PhotoScenesController.h"
+#import "RMUniversalAlert.h"
 
 #import <Autodesk-iOSViewer/Autodesk-iOSViewer.h>
 
@@ -96,12 +97,21 @@
 		failure:^ (NSError *error) {
 			NSLog(@"SceneProperties failed!") ;
 			[__refreshButton.layer removeAnimationForKey:@"SpinAnimation"] ;
-			UIAlertView *message =[[UIAlertView alloc] initWithTitle:@"iOS ReCap Sample"
+			//cyrille
+			/*UIAlertView *message =[[UIAlertView alloc] initWithTitle:@"iOS ReCap Sample"
 															 message:@"SceneProperties failed!"
 															delegate:nil
 												   cancelButtonTitle:@"OK"
 												   otherButtonTitles:nil] ;
-			[message show] ;
+			[message show] ;*/
+			[RMUniversalAlert showAlertInViewController:self._photoscenesController
+											  withTitle:@"iOS ReCap Sample"
+												message:@"SceneProperties failed!"
+									  cancelButtonTitle:@"Ok"
+								 destructiveButtonTitle:nil
+									  otherButtonTitles:nil
+											   tapBlock:nil
+			] ;
 		}
 	 ] ;
 }
@@ -150,12 +160,21 @@
 		failure:^ (NSError *error) {
 			NSLog(@"UploadFiles failed!") ;
 			self._progressBar.hidden =YES ;
-			UIAlertView *message =[[UIAlertView alloc] initWithTitle:@"iOS ReCap Sample"
+			//cyrille
+			/*UIAlertView *message =[[UIAlertView alloc] initWithTitle:@"iOS ReCap Sample"
 															 message:@"UploadFiles failed!"
 															delegate:nil
 												   cancelButtonTitle:@"OK"
 												   otherButtonTitles:nil] ;
-			[message show] ;
+			[message show] ;*/
+			[RMUniversalAlert showAlertInViewController:self._photoscenesController
+											  withTitle:@"iOS ReCap Sample"
+												message:@"UploadFiles failed!"
+									  cancelButtonTitle:@"Ok"
+								 destructiveButtonTitle:nil
+									  otherButtonTitles:nil
+											   tapBlock:nil
+			] ;
 		}
 	 ] ;
 }
@@ -219,12 +238,21 @@
 		failure:^ (NSError *error) {
 			NSLog(@"ProcessScene failed!") ;
 			[__processButton.layer removeAnimationForKey:@"SpinAnimation"] ;
-			UIAlertView *message =[[UIAlertView alloc] initWithTitle:@"iOS ReCap Sample"
+			//cyrille
+			/*UIAlertView *message =[[UIAlertView alloc] initWithTitle:@"iOS ReCap Sample"
 															 message:@"SceneProperties failed!"
 															delegate:nil
 												   cancelButtonTitle:@"OK"
 												   otherButtonTitles:nil] ;
-			[message show] ;
+			[message show] ;*/
+			[RMUniversalAlert showAlertInViewController:self._photoscenesController
+											  withTitle:@"iOS ReCap Sample"
+												message:@"SceneProperties failed!"
+									  cancelButtonTitle:@"Ok"
+								 destructiveButtonTitle:nil
+									  otherButtonTitles:nil
+											   tapBlock:nil
+			] ;
 		}
 	] ;
 }
@@ -259,12 +287,21 @@
 			failure:^ (NSError *error) {
 				NSLog(@"ProcessScene progress failed!") ;
 				[__processButton.layer removeAnimationForKey:@"SpinAnimation"] ;
-				UIAlertView *message =[[UIAlertView alloc] initWithTitle:@"iOS ReCap Sample"
+				//cyrille
+				/*UIAlertView *message =[[UIAlertView alloc] initWithTitle:@"iOS ReCap Sample"
 																 message:@"SceneProgress failed!"
 																delegate:nil
 														cancelButtonTitle:@"OK"
 														otherButtonTitles:nil] ;
-				[message show] ;
+				[message show] ;*/
+				[RMUniversalAlert showAlertInViewController:self._photoscenesController
+												  withTitle:@"iOS ReCap Sample"
+													message:@"SceneProgress failed!"
+										  cancelButtonTitle:@"Ok"
+									 destructiveButtonTitle:nil
+										  otherButtonTitles:nil
+												   tapBlock:nil
+				] ;
 				[__recapTimer invalidate] ;
 				__recapTimer =nil ;
 				dispatch_async (dispatch_get_main_queue (), ^ {
@@ -282,19 +319,30 @@
 	NSString *photosceneid =self._nameLabel.text ;
 	NSString *filePath =[PhotoScenesItem dlFullFilePathName:photosceneid] ;
 	if ( [[NSFileManager defaultManager] fileExistsAtPath:filePath] ) {
-		UIAlertView *alert =[[UIAlertView alloc]
+		//cyrille
+		/*UIAlertView *alert =[[UIAlertView alloc]
 							 initWithTitle:@"iOS ReCap Sample"
 							 message:@"Result file already present on this device, download again?"
 							 delegate:self
 							 cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil] ; // NSLocalizedString(@"Delete",nil)
-		[alert show] ;
+		[alert show] ;*/
+		[RMUniversalAlert showAlertInViewController:self._photoscenesController
+										  withTitle:@"iOS ReCap Sample"
+											message:@"Result file already present on this device, download again?"
+								  cancelButtonTitle:@"No"
+							 destructiveButtonTitle:nil
+								  otherButtonTitles:@[ @"Yes" ]
+										   tapBlock:^ (RMUniversalAlert *alert, NSInteger buttonIndex) {
+											   [self tapAlertView:alert clickedButtonAtIndex:buttonIndex] ;
+										   }
+		 ] ;
 		return ;
 	}
 	// else
 	[self getResultFile:photosceneid] ;
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+- (void)tapAlertView:(RMUniversalAlert *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
 	NSString *photosceneid =self._nameLabel.text ;
     switch ( buttonIndex ) {
         case 0: // No
@@ -309,6 +357,21 @@
 		}
     }
 }
+/*- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+	NSString *photosceneid =self._nameLabel.text ;
+    switch ( buttonIndex ) {
+        case 0: // No
+			[self doPreview:photosceneid] ;
+			break ;
+        case 1: { // Yes
+			NSError *error ;
+			NSString *filePath =[PhotoScenesItem dlFullFilePathName:photosceneid] ;
+			[[NSFileManager defaultManager] removeItemAtPath:filePath error:&error] ;
+			[self getResultFile:photosceneid] ;
+			break ;
+		}
+    }
+}*/
 
 - (void)getResultFile:(NSString *)photosceneid {
 	[__photoscenesController->_recap GetPointCloudArchive:photosceneid format:@"obj" json:YES
@@ -327,12 +390,23 @@
 		}
 		failure:^ (NSError *error) {
 			NSLog(@"GetPointCloudArchive failed!") ;
-			UIAlertView *message =[[UIAlertView alloc] initWithTitle:@"iOS ReCap Sample"
+			//cyrille
+			/*UIAlertView *message =[[UIAlertView alloc] initWithTitle:@"iOS ReCap Sample"
 															 message:@"GetPointCloudArchive failed!"
 															delegate:nil
 												   cancelButtonTitle:@"OK"
 												   otherButtonTitles:nil] ;
-			[message show] ;
+			[message show] ;*/
+			[RMUniversalAlert showAlertInViewController:self._photoscenesController
+											  withTitle:@"iOS ReCap Sample"
+												message:@"GetPointCloudArchive failed!"
+									  cancelButtonTitle:@"No"
+								 destructiveButtonTitle:nil
+									  otherButtonTitles:@[ @"Yes" ]
+											   tapBlock:^ (RMUniversalAlert *alert, NSInteger buttonIndex) {
+												   [self tapAlertView:alert clickedButtonAtIndex:buttonIndex] ;
+											   }
+			] ;
 		}
 	] ;
 }

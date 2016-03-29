@@ -18,8 +18,14 @@
 #import <Foundation/Foundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
+// TODO: replace by the newer iOS class
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 @interface ALAssetsLibrary (AdskALAssetsLibraryAdditions)
 
 - (void)addAsset:(NSURL *)assetURL toAlbum:(NSString *)albumName resultBlock:(ALAssetsLibraryAssetForURLResultBlock)resultBlock failureBlock:(ALAssetsLibraryAccessFailureBlock)failureBlock ;
 
 @end
+
+#pragma clang diagnostic pop

@@ -14,6 +14,7 @@
 // Created by Cyrille Fauvel - May 23rd, 2014
 //
 #import "AdskObjViewerController.h"
+#import "RMUniversalAlert.h"
 
 #include <vector>
 
@@ -103,8 +104,17 @@ self.nibCustomView = nibCustomView;
 
 - (void)loadObj:(NSString *)path photosceneid:(NSString *)photosceneid {
 	if ( dispatch_semaphore_wait (_objLoaderSemaphore, DISPATCH_TIME_NOW) != 0 ) {
-		UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"ReCap Error" message:@"A scene is already loading!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil] ;
-		[alert show] ;
+		//cyrille
+		//UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"ReCap Error" message:@"A scene is already loading!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil] ;
+		//[alert show] ;
+		[RMUniversalAlert showAlertInViewController:self
+									      withTitle:@"ReCap Error"
+											message:@"A scene is already loading!"
+								  cancelButtonTitle:@"Ok"
+							 destructiveButtonTitle:nil
+								  otherButtonTitles:nil
+										   tapBlock:nil
+		] ;
 		return ;
 	}
 	[[NSNotificationCenter defaultCenter] postNotificationName:kRenderingStartedNotification object:nil] ;
@@ -346,8 +356,17 @@ self.nibCustomView = nibCustomView;
 		if ( writeError != nil ) {
 			NSString *errmsg =[NSString stringWithFormat:@"Error in writing file %@ (# %@)", path , writeError] ;
 			NSLog(@"%@", errmsg) ;
-			UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"ReCap Error" message:@"Could not create an image for insertion" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil] ;
-			[alert show] ;
+			//cyrille
+			//UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"ReCap Error" message:@"Could not create an image for insertion" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil] ;
+			//[alert show] ;
+			[RMUniversalAlert showAlertInViewController:self
+										      withTitle:@"ReCap Error"
+												message:@"Could not create an image for insertion!"
+									  cancelButtonTitle:@"Ok"
+								 destructiveButtonTitle:nil
+									  otherButtonTitles:nil
+											   tapBlock:nil
+			 ] ;
 			return ;
 		}
 		// todo: Same image?

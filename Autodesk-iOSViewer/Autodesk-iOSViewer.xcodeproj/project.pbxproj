@@ -23,7 +23,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		2173E51D77C64F0DA9A91788 /* libPods-Autodesk-iOSViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8B0F3D43284C5C89D017FC /* libPods-Autodesk-iOSViewer.a */; };
 		E61A191A1928C4D8002A47C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61A19191928C4D8002A47C5 /* Foundation.framework */; };
 		E61A191F1928C4D8002A47C5 /* Autodesk-iOSViewer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E61A191E1928C4D8002A47C5 /* Autodesk-iOSViewer.h */; };
 		E61A19281928C4D8002A47C5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61A19271928C4D8002A47C5 /* XCTest.framework */; };
@@ -96,8 +95,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AE8B0F3D43284C5C89D017FC /* libPods-Autodesk-iOSViewer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Autodesk-iOSViewer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E45B9702D9494BA2B8805044 /* Pods-Autodesk-iOSViewer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Autodesk-iOSViewer.xcconfig"; path = "../Pods/Pods-Autodesk-iOSViewer.xcconfig"; sourceTree = "<group>"; };
 		E61A19161928C4D8002A47C5 /* libAutodesk-iOSViewer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libAutodesk-iOSViewer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61A19191928C4D8002A47C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E61A191D1928C4D8002A47C5 /* Autodesk-iOSViewer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Autodesk-iOSViewer-Prefix.pch"; sourceTree = "<group>"; };
@@ -135,7 +132,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E61A191A1928C4D8002A47C5 /* Foundation.framework in Frameworks */,
-				2173E51D77C64F0DA9A91788 /* libPods-Autodesk-iOSViewer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,7 +166,6 @@
 				E61A19641928CEBD002A47C5 /* Autodesk-iOSViewer-Resources */,
 				E61A19181928C4D8002A47C5 /* Frameworks */,
 				E61A19171928C4D8002A47C5 /* Products */,
-				E45B9702D9494BA2B8805044 /* Pods-Autodesk-iOSViewer.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,7 +186,6 @@
 				E61A19271928C4D8002A47C5 /* XCTest.framework */,
 				E61A192A1928C4D8002A47C5 /* UIKit.framework */,
 				E61A19621928CEBD002A47C5 /* CoreFoundation.framework */,
-				AE8B0F3D43284C5C89D017FC /* libPods-Autodesk-iOSViewer.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -300,13 +294,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E61A19391928C4D8002A47C5 /* Build configuration list for PBXNativeTarget "Autodesk-iOSViewer" */;
 			buildPhases = (
-				4AD6A08A47D64108AD33935B /* Check Pods Manifest.lock */,
 				E61A19121928C4D8002A47C5 /* Sources */,
 				E61A19131928C4D8002A47C5 /* Frameworks */,
 				E61A19141928C4D8002A47C5 /* CopyFiles */,
 				E61A193F1928C65A002A47C5 /* Headers */,
 				E61A19411928C88A002A47C5 /* Prepare Framework */,
-				12F57F20512E4B35ACCAD821 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -411,36 +403,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		12F57F20512E4B35ACCAD821 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Pods-Autodesk-iOSViewer-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4AD6A08A47D64108AD33935B /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		E61A19411928C88A002A47C5 /* Prepare Framework */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -453,8 +415,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Resources\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\nln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Resources\"\nln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Headers\"";
-			showEnvVarsInLog = 0;
+			shellScript = "set -e\n\necho \"Executing Prepare Framework script for ${PROJECT_NAME}\"\necho $RESOURCE_PATH\necho \"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"\necho \"${CONFIGURATION_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\necho \"${PROJECT_TEMP_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}\"\necho \"${BUILD_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}\"\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Resources\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\nln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Resources\"\nln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\necho \"Done\"";
 		};
 		E61A195C1928CAD1002A47C5 /* Build Framework */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -576,6 +537,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -592,9 +554,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -625,22 +587,24 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		E61A193A1928C4D8002A47C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E45B9702D9494BA2B8805044 /* Pods-Autodesk-iOSViewer.xcconfig */;
 			buildSettings = {
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/Autodesk_iOSViewer.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "Autodesk-iOSViewer/Autodesk-iOSViewer-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"/**",
+				);
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "Headers-iOSViewer";
 				SKIP_INSTALL = YES;
@@ -650,14 +614,16 @@
 		};
 		E61A193B1928C4D8002A47C5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E45B9702D9494BA2B8805044 /* Pods-Autodesk-iOSViewer.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/Autodesk_iOSViewer.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "Autodesk-iOSViewer/Autodesk-iOSViewer-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"/**",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "Headers-iOSViewer";
 				SKIP_INSTALL = YES;
@@ -680,6 +646,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Autodesk-iOSViewerTests/Autodesk-iOSViewerTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autodesk.adn.toolkit.ios.viewer.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -696,6 +663,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Autodesk-iOSViewer/Autodesk-iOSViewer-Prefix.pch";
 				INFOPLIST_FILE = "Autodesk-iOSViewerTests/Autodesk-iOSViewerTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autodesk.adn.toolkit.ios.viewer.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -735,6 +703,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autodesk.adn.toolkit.ios.viewer.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = bundle;
@@ -752,6 +721,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autodesk.adn.toolkit.ios.viewer.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = bundle;

@@ -1,3 +1,11 @@
+
+[![ReCap API](https://img.shields.io/badge/Recap-API-3.1.0-blue.svg)](http://developer-recap-autodesk.github.io/)
+[![CocoaPods](https://img.shields.io/badge/cocoapodsnpm-.0.39.0-blue.svg)](https://cocoapods.org/)
+![Xcode](https://img.shields.io/badge/Xcode-7.2.1-green.svg)
+![Platforms](https://img.shields.io/badge/platform-osx%20El%20Capitan-lightgray.svg)
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://opensource.org/licenses/MIT)
+
+
 The iOS sample
 =======================
 
@@ -33,40 +41,39 @@ each pod comes with their own dependencies, but cocoapods will manage them for y
 	 
 Building the sample
 ---------------------------
-The sample was created using Xcode 5.1.1, but should build/work fine with any 5.x or 6.x version. It also target iOS version 7.x, but can be ported back up to iOS 5.0 (not tested). 
+CocoaPods 1.0.0.beta.6 is available.
+To update use: `gem install cocoapods --pre`
+
+The sample was updated to use Xcode 7.2.1, but should build/work fine with any 5.x or 6.x version with appropriate changes. It also target iOS version 9.x, but can be ported back up to iOS 6.0 (not tested or originally written for iOS 7.x). 
 
   1. You first need to modify (or create) the UserSettings.h file and put your oAuth / ReCap credentials in it.
-     There is a _UserSettings.h file that you can copy to create your own version.
+     There is a iOSReCap/iOSReCap/_UserSettings.h file that you can copy to create your own version.
 
-  2. The first time, you need to install the dependencies using cocoa pods. For this you need [cocoapods](http://guides.cocoapods.org/using/getting-started.html#toc_3) installed on your machine, and run the pods command below:
-     pod install
+     cp iOSReCap/iOSReCap/_UserSettings.h iOSReCap/iOSReCap/UserSettings.h
 
-  3. Install the LibComponentLogging cocoa pods dependency using the following command:
+  2. Install the LibComponentLogging cocoa pods dependency using the following command:
+
      pod repo add lcl https://github.com/aharren/LibComponentLogging-CocoaPods-Specs.git
 
-  4. Next, you need to configure the LibComponentLogging pod, but running the following command:
+  3. The first time, you need to install the dependencies using cocoa pods. For this you need [cocoapods](http://guides.cocoapods.org/using/getting-started.html#toc_3) installed on your machine, and run the pods command below:
+
+     pod install
+
+  4. Next, you need to configure the LibComponentLogging pod, but running the following commands:
+
+     chmod -R aog+w *
      Pods/LibComponentLogging-pods/configure/lcl_configure pod
+     chmod -R aog+w *
 
-  5. Open the LCLLogFileConfig.h file, and change the <UniquePrefix> into a unique ID of yours. i.e. MyTestApp
+  5. Open the LCLLogFileConfig.h file, and change the <UniquePrefix> into a unique ID of yours. i.e. MyTestApp for example
 
-  6. Patch the files as documented in the patch section below.
+  6. Patch the files as documented in the patch section below. Or use the ones provided in the sample using the following command
+
+     cp -R Patched-Files/* Pods/
 
   7. Load the Autodesk-ReCap-Samples.xcworkspace in Xcode.
 
-  8. Frameworks are also static library Frameworks, and they do not support duplicate symbols. So you also need
-     to clean the pods to avoid the problem. You would need to do that step only if you update (or install) the
-     pods. Otherwise, just ignore these instructions.
-
-     Select the Pods project
-
-     a. Select the ‘Pods-Autodesk-ReCap’ target, ‘Build Phases’, and remove all the ‘Link Binary With Libraries’
-        excepted ‘Foundation.framework’
-
-     b. Select the ‘Pods-Autodesk-iOSViewer’ target, ‘Build Phases’, and remove all the ‘Link Binary With Libraries’
-        excepted ‘Foundation.framework’
-
-     c. Select the ‘Pods-Autodesk-oAuth’ target, ‘Build Phases’, and remove all the ‘Link Binary With Libraries’
-        excepted ‘Foundation.framework’, ‘libPods-Autodesk-oAuth-AFOAuth1Client.a’, and ‘libPods-Autodesk-oAuth-AFOAuth2Client.a’
+  8. Select the Pods project, Pods-autodesk-oAuth target, Build Phases, Link Binary With Libraries, and add the libAFOAuth1Client.a
 
   9. The first time you are going to build the sample, it will fail ! the reason is that the sample also
      demonstrate how to build frameworks to be reused in other projects.
@@ -128,28 +135,6 @@ If you install or update the pods to a new version, you will also need to patch 
             return [formData requestByFinalizingMultipartFormData];
         }
 
-  c. In Pods/AFOAuth1Client/AFOAuth1Client/AFOAuth1Client.m line #358, add the following
-
-        if ( callbackURL != nil )
-
-  d. In Pods/AFOAuth1Client/AFOAuth1Client/AFOAuth1Client.m line #380, change the code like this
-
-        - (void)acquireOAuthAccessTokenWithPath:(NSString *)path
-                                   requestToken:(AFOAuth1Token *)requestToken
-                                   accessMethod:(NSString *)accessMethod
-                                        success:(void (^)(AFOAuth1Token *accessToken, id responseObject))success
-                                        failure:(void (^)(NSError *error))failure
-        {
-            if (requestToken.key /*&& requestToken.verifier*/) {
-                self.accessToken = requestToken;
-        
-                NSMutableDictionary *parameters = [[self OAuthParameters] mutableCopy];
-                parameters[@"oauth_token"] = requestToken.key;
-                if ( requestToken.session != nil )
-                    parameters[@"oauth_session_handle"] =requestToken.session ;
-                if ( parameters[@"oauth_verifier"] != nil )
-                    parameters[@"oauth_verifier"] = requestToken.verifier;
-        
   e. In Pods/RestKit/Code/Network/RKObjectManager.h line #396, add the following
 
         - (NSMutableURLRequest *)multipartFormRequestWithObjectAllSigned:(id)object
@@ -158,7 +143,7 @@ If you install or update the pods to a new version, you will also need to patch 
                             parameters:(NSDictionary *)parameters
              constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block;
 
-  f. In Pods/RestKit/Code/Network/RKObjectManager.m line #513, add the following
+  f. In Pods/RestKit/Code/Network/RKObjectManager.m line #529, add the following
 
         - (NSMutableURLRequest *)multipartFormRequestWithObjectAllSigned:(id)object
                                                  method:(RKRequestMethod)method

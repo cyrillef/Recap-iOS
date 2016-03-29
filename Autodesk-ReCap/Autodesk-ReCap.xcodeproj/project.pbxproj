@@ -23,7 +23,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		A6BFE67F779C45A2B9DBD722 /* libPods-Autodesk-ReCap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7510D6B793334396B358BCBE /* libPods-Autodesk-ReCap.a */; };
 		E69A45951939DEBC00F93483 /* Autodesk_ReCapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E69CDA2D1939B78E0042374B /* Autodesk_ReCapTests.m */; };
 		E69CDA121939B78E0042374B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69CDA111939B78E0042374B /* Foundation.framework */; };
 		E69CDA171939B78E0042374B /* Autodesk-ReCap.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E69CDA161939B78E0042374B /* Autodesk-ReCap.h */; };
@@ -84,8 +83,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7510D6B793334396B358BCBE /* libPods-Autodesk-ReCap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Autodesk-ReCap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		75C027FD5D41481D9E780F25 /* Pods-Autodesk-ReCap.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Autodesk-ReCap.xcconfig"; path = "../Pods/Pods-Autodesk-ReCap.xcconfig"; sourceTree = "<group>"; };
 		E69CDA0E1939B78E0042374B /* libAutodesk-ReCap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libAutodesk-ReCap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E69CDA111939B78E0042374B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E69CDA151939B78E0042374B /* Autodesk-ReCap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Autodesk-ReCap-Prefix.pch"; sourceTree = "<group>"; };
@@ -111,7 +108,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E69CDA121939B78E0042374B /* Foundation.framework in Frameworks */,
-				A6BFE67F779C45A2B9DBD722 /* libPods-Autodesk-ReCap.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +141,6 @@
 				E69CDA421939B82D0042374B /* Autodesk-ReCap-Resources */,
 				E69CDA101939B78E0042374B /* Frameworks */,
 				E69CDA0F1939B78E0042374B /* Products */,
-				75C027FD5D41481D9E780F25 /* Pods-Autodesk-ReCap.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,7 +161,6 @@
 				E69CDA1F1939B78E0042374B /* XCTest.framework */,
 				E69CDA221939B78E0042374B /* UIKit.framework */,
 				E69CDA401939B82D0042374B /* CoreFoundation.framework */,
-				7510D6B793334396B358BCBE /* libPods-Autodesk-ReCap.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -245,13 +239,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E69CDA311939B78E0042374B /* Build configuration list for PBXNativeTarget "Autodesk-ReCap" */;
 			buildPhases = (
-				241514066EFC449DBC1CCB22 /* Check Pods Manifest.lock */,
 				E69CDA0A1939B78E0042374B /* Sources */,
 				E69CDA0B1939B78E0042374B /* Frameworks */,
 				E69CDA0C1939B78E0042374B /* CopyFiles */,
 				E69CDA4C1939B88D0042374B /* Headers */,
 				E69CDA4E1939B8CA0042374B /* Prepare Framework */,
-				405D0E0A704C4E0DBE45E33C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -353,36 +345,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		241514066EFC449DBC1CCB22 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		405D0E0A704C4E0DBE45E33C /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Pods-Autodesk-ReCap-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E69CDA4E1939B8CA0042374B /* Prepare Framework */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -395,7 +357,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Resources\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\nln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Resources\"\nln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Headers\"";
+			shellScript = "set -e\n\necho \"Executing Prepare Framework script for ${PROJECT_NAME}\"\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Resources\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\nln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Resources\"\nln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\necho \"Done\"";
 			showEnvVarsInLog = 0;
 		};
 		E69CDA531939BA2E0042374B /* Build Framework */ = {
@@ -516,6 +478,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -530,9 +493,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -561,22 +524,24 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		E69CDA321939B78E0042374B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75C027FD5D41481D9E780F25 /* Pods-Autodesk-ReCap.xcconfig */;
 			buildSettings = {
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/Autodesk_ReCap.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Autodesk-ReCap/Autodesk-ReCap-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"/**",
+				);
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "Headers-ReCap";
 				SKIP_INSTALL = YES;
@@ -586,14 +551,16 @@
 		};
 		E69CDA331939B78E0042374B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75C027FD5D41481D9E780F25 /* Pods-Autodesk-ReCap.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/Autodesk_ReCap.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Autodesk-ReCap/Autodesk-ReCap-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"/**",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "Headers-ReCap";
 				SKIP_INSTALL = YES;
@@ -617,6 +584,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Autodesk-ReCapTests/Autodesk-ReCapTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autodesk.adn.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -635,6 +603,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Autodesk-ReCap/Autodesk-ReCap-Prefix.pch";
 				INFOPLIST_FILE = "Autodesk-ReCapTests/Autodesk-ReCapTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autodesk.adn.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -676,6 +645,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autodesk.adn.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Autodesk-ReCap";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = bundle;
@@ -694,6 +664,7 @@
 				INFOPLIST_FILE = "Autodesk-ReCap-Resources/Autodesk-ReCap-Resources-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autodesk.adn.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Autodesk-ReCap";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = bundle;

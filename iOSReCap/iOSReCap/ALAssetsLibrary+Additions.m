@@ -15,6 +15,10 @@
 //
 #import "ALAssetsLibrary+Additions.h"
 
+// TODO: replace by the newer iOS class
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 @implementation ALAssetsLibrary (AdskALAssetsLibraryAdditions)
 
 - (void)addAsset:(NSURL *)assetURL toAlbum:(NSString *)albumName resultBlock:(ALAssetsLibraryAssetForURLResultBlock)resultBlock failureBlock:(ALAssetsLibraryAccessFailureBlock)failureBlock {
@@ -63,3 +67,6 @@
 }
 
 @end
+
+// TODO: replace by the newwe iOS class
+#pragma clang diagnostic pop

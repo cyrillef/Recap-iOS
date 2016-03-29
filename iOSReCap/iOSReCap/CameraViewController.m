@@ -21,9 +21,15 @@
 #import "AdskUIImage+Additions.h"
 #import "ALAssetsLibrary+Additions.h"
 
+#import "RMUniversalAlert.h"
+
 #import <CoreImage/CoreImage.h>
 #import <ImageIO/ImageIO.h>
 #import <AssetsLibrary/AssetsLibrary.h>
+
+// TODO: replace by the newer iOS class
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 //------------------------------------------------------
 // Create a CGImage with provided pixel buffer, pixel buffer must be uncompressed kCVPixelFormatType_32ARGB or kCVPixelFormatType_32BGRA
@@ -142,12 +148,21 @@ static CGContextRef CreateCGBitmapContextForSize (CGSize size) {
 	AVCaptureDevice *device =[AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo] ;
 	AVCaptureDeviceInput *deviceInput =[AVCaptureDeviceInput deviceInputWithDevice:device error:&error] ;
 	if ( error ) {
+		//cyrille
 		UIAlertView *alertView =[[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Failed with error %d", (int)[error code]]
 														   message:[error localizedDescription]
 														  delegate:nil
 												 cancelButtonTitle:@"Dismiss"
 												 otherButtonTitles:nil] ;
 		[alertView show] ;
+		/*[RMUniversalAlert showAlertInViewController:self
+										  withTitle:[NSString stringWithFormat:@"Failed with error %d", (int)[error code]]
+											message:[error localizedDescription]
+								  cancelButtonTitle:@"Dismiss"
+							 destructiveButtonTitle:nil
+								  otherButtonTitles:nil
+										   tapBlock:nil
+		] ;*/
 		return ;
 	}
 	
@@ -467,12 +482,21 @@ static CGContextRef CreateCGBitmapContextForSize (CGSize size) {
 					completionBlock:^ (NSURL *assetURL, NSError *error) {
 						if ( error ) {
 							dispatch_async (dispatch_get_main_queue(), ^(void) {
+								//cyrille
 								UIAlertView *alertView =[[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%@ (%d)", @"Save to camera roll failed", (int)[error code]]
 																				   message:[error localizedDescription]
 																				  delegate:nil
 																		 cancelButtonTitle:@"Dismiss"
 																		 otherButtonTitles:nil] ;
 								[alertView show] ;
+								/*[RMUniversalAlert showAlertInViewController:self
+																  withTitle:[NSString stringWithFormat:@"%@ (%d)", @"Save to camera roll failed", (int)[error code]]
+																	message:[error localizedDescription]
+														  cancelButtonTitle:@"Dismiss"
+													 destructiveButtonTitle:nil
+														  otherButtonTitles:nil
+																   tapBlock:nil
+								] ;*/
 							}) ;
 							return ;
 						}
@@ -714,3 +738,6 @@ static CGContextRef CreateCGBitmapContextForSize (CGSize size) {
 }
 
 @end
+
+// TODO: replace by the newer iOS class
+#pragma clang diagnostic pop

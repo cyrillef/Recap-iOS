@@ -205,8 +205,12 @@
 		NSArray *items =[line componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] ;
 		NSString *command =[NSString stringWithFormat:@"parseObj_%@:line:", [items objectAtIndex:0]] ;
 		SEL cmd =NSSelectorFromString (command) ;
-		if ( cmd != nil && [self respondsToSelector:cmd] )
+		if ( cmd != nil && [self respondsToSelector:cmd] ) {
+			#pragma clang diagnostic push
+			#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 			[self performSelector:cmd withObject:items withObject:line] ;
+			#pragma clang diagnostic pop
+		}
 		[self parseProgress:(0.05 + 0.28 * ((double)i++ / nb)) progress:progress] ;
 	}
 	NSLog(@"exec time = %f", [[NSDate date] timeIntervalSinceDate:methodStart]) ; methodStart =[NSDate date] ;
@@ -378,8 +382,12 @@
 			
 			NSString *command =[NSString stringWithFormat:@"parseObj_%@:line:", [tokens objectAtIndex:0]] ;
 			SEL cmd =NSSelectorFromString (command) ;
-			if ( cmd != nil && [self respondsToSelector:cmd] )
+			if ( cmd != nil && [self respondsToSelector:cmd] ) {
+				#pragma clang diagnostic push
+				#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 				[self performSelector:cmd withObject:tokens withObject:nil] ;
+				#pragma clang diagnostic pop
+			}
 		}
 		
 		[self parseProgress:(0.05 + 0.28 * ((double)i++ / nb)) progress:progress] ;
@@ -644,13 +652,13 @@
 		GLFaceEltDef glfaceElt ;
 		switch ( def.size () ) { // 0 means not defined since indices start at index 1
 			case 1:
-				glfaceElt =GLFaceEltDefMake (std::stoul (def [0]) - 1, -1, -1) ;
+				glfaceElt =GLFaceEltDefMake ((unsigned int)std::stoul (def [0]) - 1, -1, -1) ;
 				break ;
 			case 2:
-				glfaceElt =GLFaceEltDefMake (std::stoul (def [0]) - 1, std::stoul (def [1]) - 1, -1) ;
+				glfaceElt =GLFaceEltDefMake ((unsigned int)std::stoul (def [0]) - 1, (unsigned int)std::stoul (def [1]) - 1, -1) ;
 				break ;
 			case 3:
-				glfaceElt =GLFaceEltDefMake (std::stoul (def [0]) - 1, std::stoul (def [1]) - 1, std::stoul (def [2]) - 1) ;
+				glfaceElt =GLFaceEltDefMake ((unsigned int)std::stoul (def [0]) - 1, (unsigned int)std::stoul (def [1]) - 1, (unsigned int)std::stoul (def [2]) - 1) ;
 				break ;
 		}
 		glface._def.push_back (glfaceElt) ;
@@ -682,8 +690,12 @@
 		NSArray *items =[line componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] ;
 		NSString *command =[NSString stringWithFormat:@"parseMtl_%@:line:", [items objectAtIndex:0]] ;
 		SEL cmd =NSSelectorFromString (command) ;
-		if ( cmd != nil && [self respondsToSelector:cmd] )
+		if ( cmd != nil && [self respondsToSelector:cmd] ) {
+			#pragma clang diagnostic push
+			#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 			[self performSelector:cmd withObject:items withObject:line] ;
+			#pragma clang diagnostic pop
+		}
 	}
 	return (YES) ;
 }

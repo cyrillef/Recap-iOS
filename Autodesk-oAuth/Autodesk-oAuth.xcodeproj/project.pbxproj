@@ -23,14 +23,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		80E4160DED534C5BA2DBD04F /* libPods-Autodesk-oAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88FA517D42AD461E93D57B4D /* libPods-Autodesk-oAuth.a */; };
 		E692EE5519436F6900054BB0 /* AdskNSString+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = E692EE5319436F6900054BB0 /* AdskNSString+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E692EE5619436F6900054BB0 /* AdskNSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E692EE5419436F6900054BB0 /* AdskNSString+Additions.m */; };
 		E69CD9F8193884600042374B /* AdskOAuthController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E69CD9F7193884600042374B /* AdskOAuthController.mm */; };
-		E6B834881945C0EC00DDD174 /* AdskRESTful.h in Headers */ = {isa = PBXBuildFile; fileRef = E6B834821945C0EC00DDD174 /* AdskRESTful.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E6B834891945C0EC00DDD174 /* AdskRESTful.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B834831945C0EC00DDD174 /* AdskRESTful.m */; };
-		E6B8348A1945C0EC00DDD174 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = E6B834841945C0EC00DDD174 /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E6B8348B1945C0EC00DDD174 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B834851945C0EC00DDD174 /* NSData+Base64.m */; };
 		E6FE307D1931D139001B8589 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6FE307C1931D139001B8589 /* Foundation.framework */; };
 		E6FE308B1931D139001B8589 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6FE308A1931D139001B8589 /* XCTest.framework */; };
 		E6FE308C1931D139001B8589 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6FE307C1931D139001B8589 /* Foundation.framework */; };
@@ -88,15 +83,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		652B63396FD941B09CE93344 /* Pods-Autodesk-oAuth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Autodesk-oAuth.xcconfig"; path = "../Pods/Pods-Autodesk-oAuth.xcconfig"; sourceTree = "<group>"; };
-		88FA517D42AD461E93D57B4D /* libPods-Autodesk-oAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Autodesk-oAuth.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6641F6A1CA719BE00F9750C /* libAFOAuth1Client.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAFOAuth1Client.a; sourceTree = "<group>"; };
 		E692EE5319436F6900054BB0 /* AdskNSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AdskNSString+Additions.h"; sourceTree = "<group>"; };
 		E692EE5419436F6900054BB0 /* AdskNSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AdskNSString+Additions.m"; sourceTree = "<group>"; };
 		E69CD9F7193884600042374B /* AdskOAuthController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AdskOAuthController.mm; sourceTree = "<group>"; };
-		E6B834821945C0EC00DDD174 /* AdskRESTful.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdskRESTful.h; sourceTree = "<group>"; };
-		E6B834831945C0EC00DDD174 /* AdskRESTful.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdskRESTful.m; sourceTree = "<group>"; };
-		E6B834841945C0EC00DDD174 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		E6B834851945C0EC00DDD174 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		E6FE30791931D139001B8589 /* libAutodesk-oAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libAutodesk-oAuth.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6FE307C1931D139001B8589 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E6FE30801931D139001B8589 /* Autodesk-oAuth-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Autodesk-oAuth-Prefix.pch"; sourceTree = "<group>"; };
@@ -121,7 +111,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6FE307D1931D139001B8589 /* Foundation.framework in Frameworks */,
-				80E4160DED534C5BA2DBD04F /* libPods-Autodesk-oAuth.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,17 +136,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E6B8347F1945C0EC00DDD174 /* AdskRESTful */ = {
-			isa = PBXGroup;
-			children = (
-				E6B834821945C0EC00DDD174 /* AdskRESTful.h */,
-				E6B834831945C0EC00DDD174 /* AdskRESTful.m */,
-				E6B834841945C0EC00DDD174 /* NSData+Base64.h */,
-				E6B834851945C0EC00DDD174 /* NSData+Base64.m */,
-			);
-			path = AdskRESTful;
-			sourceTree = "<group>";
-		};
 		E6FE30701931D139001B8589 = {
 			isa = PBXGroup;
 			children = (
@@ -166,7 +144,6 @@
 				E6FE30BB1931D655001B8589 /* Autodesk-oAuth-Resources */,
 				E6FE307B1931D139001B8589 /* Frameworks */,
 				E6FE307A1931D139001B8589 /* Products */,
-				652B63396FD941B09CE93344 /* Pods-Autodesk-oAuth.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,11 +160,11 @@
 		E6FE307B1931D139001B8589 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E6641F6A1CA719BE00F9750C /* libAFOAuth1Client.a */,
 				E6FE307C1931D139001B8589 /* Foundation.framework */,
 				E6FE308A1931D139001B8589 /* XCTest.framework */,
 				E6FE308D1931D139001B8589 /* UIKit.framework */,
 				E6FE30B91931D655001B8589 /* CoreFoundation.framework */,
-				88FA517D42AD461E93D57B4D /* libPods-Autodesk-oAuth.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -195,7 +172,6 @@
 		E6FE307E1931D139001B8589 /* Autodesk-oAuth */ = {
 			isa = PBXGroup;
 			children = (
-				E6B8347F1945C0EC00DDD174 /* AdskRESTful */,
 				E692EE5319436F6900054BB0 /* AdskNSString+Additions.h */,
 				E692EE5419436F6900054BB0 /* AdskNSString+Additions.m */,
 				E6FE30AC1931D39E001B8589 /* Autodesk-oAuth.h */,
@@ -259,8 +235,6 @@
 			files = (
 				E6FE30AE1931D3F9001B8589 /* Autodesk-oAuth.h in Headers */,
 				E692EE5519436F6900054BB0 /* AdskNSString+Additions.h in Headers */,
-				E6B834881945C0EC00DDD174 /* AdskRESTful.h in Headers */,
-				E6B8348A1945C0EC00DDD174 /* NSData+Base64.h in Headers */,
 				E6FE30AF1931D40F001B8589 /* AdskOAuthController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,13 +246,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6FE309C1931D139001B8589 /* Build configuration list for PBXNativeTarget "Autodesk-oAuth" */;
 			buildPhases = (
-				60D332E4A8BF4024B992BBC4 /* Check Pods Manifest.lock */,
 				E6FE30751931D139001B8589 /* Sources */,
 				E6FE30761931D139001B8589 /* Frameworks */,
 				E6FE30771931D139001B8589 /* CopyFiles */,
 				E6FE30AD1931D3EF001B8589 /* Headers */,
 				E6FE30B01931D50E001B8589 /* Prepare Framework */,
-				63B2B890106F45B1AA5A8CF8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -380,36 +352,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		60D332E4A8BF4024B992BBC4 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		63B2B890106F45B1AA5A8CF8 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Pods-Autodesk-oAuth-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E6FE30B01931D50E001B8589 /* Prepare Framework */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -422,7 +364,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Resources\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\nln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Resources\"\nln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Headers\"";
+			shellScript = "set -e\n\necho \"Executing Prepare Framework script for ${PROJECT_NAME}\"\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Resources\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\nln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Resources\"\nln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\necho \"Done\"";
 			showEnvVarsInLog = 0;
 		};
 		E6FE30B31931D599001B8589 /* Build Framework */ = {
@@ -462,9 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6B834891945C0EC00DDD174 /* AdskRESTful.m in Sources */,
 				E692EE5619436F6900054BB0 /* AdskNSString+Additions.m in Sources */,
-				E6B8348B1945C0EC00DDD174 /* NSData+Base64.m in Sources */,
 				E69CD9F8193884600042374B /* AdskOAuthController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,6 +486,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -560,9 +501,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -591,22 +532,24 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		E6FE309D1931D139001B8589 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 652B63396FD941B09CE93344 /* Pods-Autodesk-oAuth.xcconfig */;
 			buildSettings = {
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/Autodesk_oAuth.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Autodesk-oAuth/Autodesk-oAuth-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"/**",
+				);
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "Headers-oAuth";
 				SKIP_INSTALL = YES;
@@ -616,14 +559,16 @@
 		};
 		E6FE309E1931D139001B8589 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 652B63396FD941B09CE93344 /* Pods-Autodesk-oAuth.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/Autodesk_oAuth.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Autodesk-oAuth/Autodesk-oAuth-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"/**",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "Headers-oAuth";
 				SKIP_INSTALL = YES;
@@ -647,6 +592,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Autodesk-oAuthTests/Autodesk-oAuthTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autodesk.adn.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -665,6 +611,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Autodesk-oAuth/Autodesk-oAuth-Prefix.pch";
 				INFOPLIST_FILE = "Autodesk-oAuthTests/Autodesk-oAuthTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autodesk.adn.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -705,6 +652,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autodesk.adn.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Autodesk-oAuth";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = bundle;
@@ -721,6 +669,7 @@
 				INFOPLIST_FILE = "Autodesk-oAuth-Resources/Autodesk-oAuth-Resources-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autodesk.adn.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Autodesk-oAuth";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = bundle;

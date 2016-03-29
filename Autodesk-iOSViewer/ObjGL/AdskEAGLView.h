@@ -25,6 +25,11 @@
 @class AdskEAGLView ;
 
 //-------------------------------------------------------------------
+/*@protocol protocolInterface <NSObject>
+ @required
+ - (void)myMethod:(NSObject *)parameter ;
+ @end*/
+
 @interface AdskObjViewerBaseController : UIViewController
 
 - (void)drawView:(AdskEAGLView *)view ;

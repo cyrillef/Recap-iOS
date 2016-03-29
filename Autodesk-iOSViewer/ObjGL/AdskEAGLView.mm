@@ -22,7 +22,12 @@
 //-------------------------------------------------------------------
 @implementation AdskObjViewerBaseController
 
-//- (void)drawView:(AdskEAGLView *)view ;
+-(void)drawView:(AdskEAGLView *)view {
+	//NSInvalidAbstractInvocation () ;
+	[NSException raise:NSInternalInconsistencyException
+				format:@"Abstract class method needs an implementation %@", NSStringFromSelector(_cmd)
+	 ] ;
+}
 
 @end
 
@@ -401,7 +406,7 @@
 	// OpenGL ES measures data in PIXELS
 	// Create a graphics context with the target size measured in POINTS
 	NSInteger widthInPoints, heightInPoints ;
-	if ( UIGraphicsBeginImageContextWithOptions != NULL ) {
+	if ( &UIGraphicsBeginImageContextWithOptions != NULL ) {
 		// On iOS 4 and later, use UIGraphicsBeginImageContextWithOptions to take the scale into consideration
 		// Set the scale parameter to your OpenGL ES view's contentScaleFactor
 		// so that you get a high-resolution snapshot when its value is greater than 1.0

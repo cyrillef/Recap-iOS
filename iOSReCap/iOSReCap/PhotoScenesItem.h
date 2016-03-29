@@ -19,6 +19,8 @@
 #import <ELCImagePickerController/ELCAlbumPickerController.h>
 #import <ELCImagePickerController/ELCAssetTablePicker.h>
 
+#import "RMUniversalAlert.h"
+
 @class PhotoScenesController ;
 
 //-----------------------------------------------------------------------------
@@ -58,7 +60,8 @@
 - (IBAction)processPhotoscene:(id)sender ;
 - (void)processPhotosceneProgress:(NSTimer *)theTimer ;
 - (IBAction)preview:(id)sender ;
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex ;
+- (void)tapAlertView:(RMUniversalAlert *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex ;
+//- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex ;
 - (void)getResultFile:(NSString *)photosceneid ;
 + (NSString *)dlFullFilePathName:(NSString *)filename ;
 - (void)downloadResultFile:(NSString *)scenelink photosceneid:(NSString *)photosceneid ;

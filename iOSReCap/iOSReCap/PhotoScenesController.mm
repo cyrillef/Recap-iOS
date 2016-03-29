@@ -25,6 +25,10 @@
 #import <ImageIO/ImageIO.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
+// TODO: replace by the newer iOS class
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 @interface PhotoScenesController () {
 	AdskOAuthController *_oauthController ;
 	NSIndexPath *_selectedRowIndex ;
@@ -99,7 +103,8 @@
 - (void)login {
 	_oauthController =[[AdskOAuthController alloc] initWithNibName:nil bundle:nil] ;
 	[self OxygenSetup] ;
-	[self presentViewController:_oauthController animated:YES
+	//cyrille [self presentViewController:_oauthController animated:YES
+	[self.view.window.rootViewController presentViewController:_oauthController animated:YES
 		completion:^ () {
 			[_oauthController RequestToken:^ () {
 					[_oauthController dismissViewControllerAnimated:YES completion:nil] ;
@@ -499,7 +504,7 @@
 	int i =0, n =DefaultCellSubviewsNb ;
 	for ( UIView *p in ((UIView *)cell.subviews [0]).subviews ) {
 		if ( [p isKindOfClass:[UILabel class]] ) {
-			if ( [((UILabel *)p).text isEqualToString:@"Photoscene"] ) {
+			if ( [((UILabel *)p).text isEqualToString:@"Photoscene"] /*|| [((UILabel *)p).text isEqualToString:photoscene._name]*/ ) {
 				n =i ;
 				break ;
 			}
@@ -594,3 +599,6 @@
 }
 
 @end
+
+// TODO: replace by the newer iOS class
+#pragma clang diagnostic pop
