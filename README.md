@@ -1,3 +1,7 @@
+This sample is deprecated as there is a new API for ReCap
+=======================
+Go to https://developer.autodesk.com/en/docs/reality-capture/v1/overview/ for more information
+
 
 [![ReCap API](https://img.shields.io/badge/Recap%20API-3.1.0-blue.svg)](http://developer-recap-autodesk.github.io/)
 [![CocoaPods](https://img.shields.io/badge/cocoapods-0.39.0-blue.svg)](https://cocoapods.org/)
